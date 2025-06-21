@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Support - Nigerian Nursing Excellence Council</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="support.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-heart-pulse"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>NNEC</h1>
+                        <p>Nigerian Nursing Excellence Council</p>
+                    </div>
+                </div>
+                
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="register.html" class="nav-link">Register</a>
+                    <a href="faq.html" class="nav-link">FAQ</a>
+                    <a href="dashboard.html" class="nav-link login-btn">Login</a>
+                </nav>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="support-hero">
+        <div class="hero-background">
+            <img src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Professional Support">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>We're Here to Help</h1>
+                <p>Get instant support for registration, examinations, and all NNEC services. Our dedicated team is available 24/7 to assist you.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support Available</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">&lt;2min</div>
+                        <div class="stat-label">Average Response</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Options -->
+    <section class="support-options">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Support Method</h2>
+                <p>Multiple ways to get the help you need, when you need it</p>
+            </div>
+
+            <div class="support-grid">
+                <div class="support-card priority">
+                    <div class="support-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Live Chat</h3>
+                    <p>Get instant help from our support team. Available 24/7 for urgent matters.</p>
+                    <div class="support-meta">
+                        <span class="response-time">Instant Response</span>
+                        <span class="availability">24/7 Available</span>
+                    </div>
+                    <button class="support-btn" id="startLiveChat">Start Chat Now</button>
+                </div>
+
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone Support</h3>
+                    <p>Speak directly with our support specialists for complex issues.</p>
+                    <div class="support-meta">
+                        <span class="response-time">Immediate</span>
+                        <span class="availability">Mon-Fri 8AM-6PM</span>
+                    </div>
+                    <a href="tel:+2348006632" class="support-btn">Call +234 800 NNEC (6632)</a>
+                </div>
+
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Support</h3>
+                    <p>Send detailed questions and receive comprehensive responses.</p>
+                    <div class="support-meta">
+                        <span class="response-time">Within 2 hours</span>
+                        <span class="availability">24/7 Available</span>
+                    </div>
+                    <a href="mailto:support@nnec.ng" class="support-btn">Email Us</a>
+                </div>
+
+                <div class="support-card">
+                    <div class="support-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Call</h3>
+                    <p>Schedule a one-on-one video session for personalized assistance.</p>
+                    <div class="support-meta">
+                        <span class="response-time">Scheduled</span>
+                        <span class="availability">By Appointment</span>
+                    </div>
+                    <button class="support-btn" id="scheduleVideo">Schedule Call</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Form -->
+    <section class="support-form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h2>Send Us a Message</h2>
+                    <p>Can't find what you're looking for? Send us a detailed message and we'll get back to you quickly.</p>
+                </div>
+
+                <form class="support-form" id="supportForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Support Category *</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="registration">Registration Issues</option>
+                                <option value="examination">Examination Support</option>
+                                <option value="payment">Payment Problems</option>
+                                <option value="technical">Technical Issues</option>
+                                <option value="certification">Certification Queries</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Please describe your issue in detail..."></textarea>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="attachment">Attach Files (Optional)</label>
+                            <div class="file-upload">
+                                <input type="file" id="attachment" name="attachment" multiple accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+                                <div class="upload-area">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Drag & drop files here or click to browse</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="reset" class="btn btn-secondary">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Quick Links -->
+    <section class="faq-quick">
+        <div class="container">
+            <div class="section-header">
+                <h2>Quick Answers</h2>
+                <p>Common questions answered instantly</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <div class="faq-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>How to Register?</h3>
+                    <p>Step-by-step guide to complete your registration process.</p>
+                    <a href="register.html" class="faq-link">Start Registration</a>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Payment Methods</h3>
+                    <p>All accepted payment options and fee structures.</p>
+                    <a href="faq.html#payment" class="faq-link">View Payment Info</a>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Exam Schedules</h3>
+                    <p>Upcoming examination dates and registration deadlines.</p>
+                    <a href="faq.html#exams" class="faq-link">Check Schedules</a>
+                </div>
+
+                <div class="faq-card">
+                    <div class="faq-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certificate Verification</h3>
+                    <p>How to verify and download your certificates.</p>
+                    <a href="faq.html#certificates" class="faq-link">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-heart-pulse"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3>NNEC</h3>
+                            <p>Nigerian Nursing Excellence Council</p>
+                        </div>
+                    </div>
+                    <p class="footer-desc">
+                        Elevating nursing and midwifery standards across Nigeria through professional 
+                        excellence, continuous education, and innovative healthcare solutions.
+                    </p>
+                    <p class="footer-copy">
+                        © 2025 Nigerian Nursing Excellence Council. Powered by SW Global
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support Options</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>support@nnec.ng</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+234 800 NNEC (6632)</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-comments"></i>
+                            <span>Live Chat (24/7)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Trusted by over 300,000 certified professionals across Nigeria</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="support.js"></script>
+</body>
+</html>

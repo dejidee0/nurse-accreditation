@@ -1,0 +1,497 @@
+/* FAQ Page Specific Styles */
+
+.faq-hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, #f0fdf4, #f9fafb);
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FAQ Search */
+.faq-search {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box i {
+    position: absolute;
+    left: 1rem;
+    color: #9ca3af;
+    font-size: 1.1rem;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 50px;
+    font-size: 1rem;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #059669;
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+/* FAQ Categories */
+.faq-categories {
+    padding: 3rem 0;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.categories-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.category-btn:hover {
+    border-color: #059669;
+    background: #f0fdf4;
+    transform: translateY(-2px);
+}
+
+.category-btn.active {
+    border-color: #059669;
+    background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+    color: #059669;
+}
+
+.category-btn i {
+    font-size: 1.5rem;
+    color: #6b7280;
+    transition: color 0.3s ease;
+}
+
+.category-btn.active i,
+.category-btn:hover i {
+    color: #059669;
+}
+
+.category-btn span {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+.category-btn.active span,
+.category-btn:hover span {
+    color: #059669;
+}
+
+/* FAQ Content */
+.faq-content {
+    padding: 5rem 0;
+    background: #f9fafb;
+}
+
+.faq-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-section {
+    margin-bottom: 3rem;
+}
+
+.faq-section h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #059669;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #f9fafb;
+}
+
+.faq-question h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+    flex: 1;
+}
+
+.faq-question i {
+    color: #059669;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 2rem 2rem;
+    color: #6b7280;
+    line-height: 1.6;
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+    animation: fadeInDown 0.3s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.faq-answer p {
+    margin-bottom: 1rem;
+}
+
+.faq-answer ul,
+.faq-answer ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.faq-answer li {
+    margin-bottom: 0.5rem;
+}
+
+.faq-answer a {
+    color: #059669;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.faq-answer a:hover {
+    text-decoration: underline;
+}
+
+/* Fee Table */
+.fee-table {
+    background: #f0fdf4;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.fee-table h4 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.fee-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.fee-table td {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #d1fae5;
+}
+
+.fee-table td:first-child {
+    font-weight: 500;
+    color: #374151;
+}
+
+.fee-table td:last-child {
+    font-weight: 700;
+    color: #059669;
+    text-align: right;
+}
+
+/* Exam Schedule */
+.exam-schedule {
+    background: #f0fdf4;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.exam-schedule h4 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.schedule-item {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #d1fae5;
+}
+
+.schedule-item .month {
+    font-weight: 700;
+    color: #059669;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.schedule-item .dates {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.schedule-item .note {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+/* Help Section */
+.help-section {
+    margin-top: 4rem;
+}
+
+.help-card {
+    background: linear-gradient(135deg, #059669, #10B981);
+    color: white;
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.help-icon {
+    background: rgba(255, 255, 255, 0.2);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.help-content {
+    flex: 1;
+    text-align: left;
+}
+
+.help-content h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.help-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.help-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.help-actions .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.help-actions .btn-primary {
+    background: white;
+    color: #059669;
+}
+
+.help-actions .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.help-actions .btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.help-actions .btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+/* Hidden Sections */
+.faq-section.hidden {
+    display: none;
+}
+
+/* Search Highlighting */
+.search-highlight {
+    background: #fef3c7;
+    padding: 0.1rem 0.2rem;
+    border-radius: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-hero {
+        padding: 100px 0 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .category-btn {
+        padding: 0.75rem 1rem;
+        min-width: auto;
+    }
+
+    .category-btn span {
+        font-size: 0.8rem;
+    }
+
+    .faq-question {
+        padding: 1rem 1.5rem;
+    }
+
+    .faq-answer {
+        padding: 0 1.5rem 1.5rem;
+    }
+
+    .help-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .help-content {
+        text-align: center;
+    }
+
+    .help-actions {
+        flex-direction: column;
+    }
+
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-question {
+        padding: 1rem;
+    }
+
+    .faq-answer {
+        padding: 0 1rem 1rem;
+    }
+
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+
+    .help-card {
+        padding: 1.5rem;
+    }
+
+    .help-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .help-content p {
+        font-size: 1rem;
+    }
+}
