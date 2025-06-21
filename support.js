@@ -1,86 +1,86 @@
 // Support Page JavaScript
 
-document.addEventListener('DOMContentLoaded', () => {
-    initializeSupportPage();
+document.addEventListener("DOMContentLoaded", () => {
+  initializeSupportPage();
 });
 
 function initializeSupportPage() {
-    setupSupportForm();
-    setupLiveChat();
-    setupVideoScheduling();
-    setupFileUpload();
+  setupSupportForm();
+  setupLiveChat();
+  setupVideoScheduling();
+  setupFileUpload();
 }
 
 // Support Form Handling
 function setupSupportForm() {
-    const supportForm = document.getElementById('supportForm');
-    
-    if (supportForm) {
-        supportForm.addEventListener('submit', handleSupportFormSubmit);
-        
-        // Auto-save form data
-        const formInputs = supportForm.querySelectorAll('input, select, textarea');
-        formInputs.forEach(input => {
-            input.addEventListener('input', () => {
-                saveFormData();
-            });
-        });
-        
-        // Load saved form data
-        loadFormData();
-    }
+  const supportForm = document.getElementById("supportForm");
+
+  if (supportForm) {
+    supportForm.addEventListener("submit", handleSupportFormSubmit);
+
+    // Auto-save form data
+    const formInputs = supportForm.querySelectorAll("input, select, textarea");
+    formInputs.forEach((input) => {
+      input.addEventListener("input", () => {
+        saveFormData();
+      });
+    });
+
+    // Load saved form data
+    loadFormData();
+  }
 }
 
 function handleSupportFormSubmit(e) {
-    e.preventDefault();
-    
-    const formData = new FormData(e.target);
-    const supportData = {};
-    
-    for (let [key, value] of formData.entries()) {
-        supportData[key] = value;
-    }
-    
-    // Show loading state
-    const submitBtn = e.target.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-    
-    // Simulate form submission
-    setTimeout(() => {
-        showSuccessMessage();
-        e.target.reset();
-        clearFormData();
-        
-        // Reset button
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-    }, 2000);
+  e.preventDefault();
+
+  const formData = new FormData(e.target);
+  const supportData = {};
+
+  for (let [key, value] of formData.entries()) {
+    supportData[key] = value;
+  }
+
+  // Show loading state
+  const submitBtn = e.target.querySelector('button[type="submit"]');
+  const originalText = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+  // Simulate form submission
+  setTimeout(() => {
+    showSuccessMessage();
+    e.target.reset();
+    clearFormData();
+
+    // Reset button
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  }, 2000);
 }
 
 function showSuccessMessage() {
-    const message = document.createElement('div');
-    message.className = 'success-message';
-    message.innerHTML = `
+  const message = document.createElement("div");
+  message.className = "success-message";
+  message.innerHTML = `
         <div class="success-content">
             <i class="fas fa-check-circle"></i>
             <h3>Message Sent Successfully!</h3>
             <p>We've received your message and will respond within 2 hours. Check your email for updates.</p>
-            <div class="ticket-number">Ticket #NNEC${Date.now()}</div>
+            <div class="ticket-number">Ticket #NMCN${Date.now()}</div>
         </div>
     `;
-    
-    document.body.appendChild(message);
-    
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-        message.remove();
-    }, 5000);
-    
-    // Add styles
-    if (!document.querySelector('#success-message-styles')) {
-        const styles = `
+
+  document.body.appendChild(message);
+
+  // Auto remove after 5 seconds
+  setTimeout(() => {
+    message.remove();
+  }, 5000);
+
+  // Add styles
+  if (!document.querySelector("#success-message-styles")) {
+    const styles = `
             .success-message {
                 position: fixed;
                 top: 50%;
@@ -135,51 +135,54 @@ function showSuccessMessage() {
                 font-size: 0.9rem;
             }
         `;
-        
-        const style = document.createElement('style');
-        style.id = 'success-message-styles';
-        style.textContent = styles;
-        document.head.appendChild(style);
-    }
+
+    const style = document.createElement("style");
+    style.id = "success-message-styles";
+    style.textContent = styles;
+    document.head.appendChild(style);
+  }
 }
 
 // Live Chat Setup
 function setupLiveChat() {
-    const liveChatBtn = document.getElementById('startLiveChat');
-    
-    if (liveChatBtn) {
-        liveChatBtn.addEventListener('click', () => {
-            // Open chat widget
-            const chatWidget = document.getElementById('chatWidget');
-            if (chatWidget) {
-                chatWidget.classList.add('active');
-                
-                // Add welcome message
-                setTimeout(() => {
-                    if (window.NNEC && window.NNEC.addChatMessage) {
-                        window.NNEC.addChatMessage('Hello! I\'m here to help you with any questions about NNEC services. How can I assist you today?', false);
-                    }
-                }, 500);
-            }
-        });
-    }
+  const liveChatBtn = document.getElementById("startLiveChat");
+
+  if (liveChatBtn) {
+    liveChatBtn.addEventListener("click", () => {
+      // Open chat widget
+      const chatWidget = document.getElementById("chatWidget");
+      if (chatWidget) {
+        chatWidget.classList.add("active");
+
+        // Add welcome message
+        setTimeout(() => {
+          if (window.NMCN && window.NMCN.addChatMessage) {
+            window.NMCN.addChatMessage(
+              "Hello! I'm here to help you with any questions about NMCN services. How can I assist you today?",
+              false
+            );
+          }
+        }, 500);
+      }
+    });
+  }
 }
 
 // Video Call Scheduling
 function setupVideoScheduling() {
-    const scheduleBtn = document.getElementById('scheduleVideo');
-    
-    if (scheduleBtn) {
-        scheduleBtn.addEventListener('click', () => {
-            showSchedulingModal();
-        });
-    }
+  const scheduleBtn = document.getElementById("scheduleVideo");
+
+  if (scheduleBtn) {
+    scheduleBtn.addEventListener("click", () => {
+      showSchedulingModal();
+    });
+  }
 }
 
 function showSchedulingModal() {
-    const modal = document.createElement('div');
-    modal.className = 'scheduling-modal';
-    modal.innerHTML = `
+  const modal = document.createElement("div");
+  modal.className = "scheduling-modal";
+  modal.innerHTML = `
         <div class="modal-overlay"></div>
         <div class="modal-content">
             <div class="modal-header">
@@ -190,7 +193,9 @@ function showSchedulingModal() {
                 <form id="schedulingForm">
                     <div class="form-group">
                         <label for="callDate">Preferred Date</label>
-                        <input type="date" id="callDate" name="callDate" required min="${new Date().toISOString().split('T')[0]}">
+                        <input type="date" id="callDate" name="callDate" required min="${
+                          new Date().toISOString().split("T")[0]
+                        }">
                     </div>
                     <div class="form-group">
                         <label for="callTime">Preferred Time</label>
@@ -216,19 +221,25 @@ function showSchedulingModal() {
             </div>
         </div>
     `;
-    
-    document.body.appendChild(modal);
-    
-    // Event listeners
-    modal.querySelector('.modal-close').addEventListener('click', () => modal.remove());
-    modal.querySelector('.modal-cancel').addEventListener('click', () => modal.remove());
-    modal.querySelector('.modal-overlay').addEventListener('click', () => modal.remove());
-    
-    modal.querySelector('#schedulingForm').addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Show success message
-        modal.innerHTML = `
+
+  document.body.appendChild(modal);
+
+  // Event listeners
+  modal
+    .querySelector(".modal-close")
+    .addEventListener("click", () => modal.remove());
+  modal
+    .querySelector(".modal-cancel")
+    .addEventListener("click", () => modal.remove());
+  modal
+    .querySelector(".modal-overlay")
+    .addEventListener("click", () => modal.remove());
+
+  modal.querySelector("#schedulingForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // Show success message
+    modal.innerHTML = `
             <div class="modal-overlay"></div>
             <div class="modal-content">
                 <div class="success-content">
@@ -239,11 +250,11 @@ function showSchedulingModal() {
                 </div>
             </div>
         `;
-    });
-    
-    // Add modal styles
-    if (!document.querySelector('#modal-styles')) {
-        const modalStyles = `
+  });
+
+  // Add modal styles
+  if (!document.querySelector("#modal-styles")) {
+    const modalStyles = `
             .scheduling-modal {
                 position: fixed;
                 top: 0;
@@ -389,94 +400,96 @@ function showSchedulingModal() {
                 line-height: 1.6;
             }
         `;
-        
-        const style = document.createElement('style');
-        style.id = 'modal-styles';
-        style.textContent = modalStyles;
-        document.head.appendChild(style);
-    }
+
+    const style = document.createElement("style");
+    style.id = "modal-styles";
+    style.textContent = modalStyles;
+    document.head.appendChild(style);
+  }
 }
 
 // File Upload Enhancement
 function setupFileUpload() {
-    const fileInput = document.getElementById('attachment');
-    const uploadArea = document.querySelector('.upload-area');
-    
-    if (fileInput && uploadArea) {
-        // Drag and drop functionality
-        uploadArea.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            uploadArea.style.borderColor = '#059669';
-            uploadArea.style.background = '#f0fdf4';
-        });
-        
-        uploadArea.addEventListener('dragleave', () => {
-            uploadArea.style.borderColor = '#d1d5db';
-            uploadArea.style.background = '#fafafa';
-        });
-        
-        uploadArea.addEventListener('drop', (e) => {
-            e.preventDefault();
-            uploadArea.style.borderColor = '#d1d5db';
-            uploadArea.style.background = '#fafafa';
-            
-            const files = e.dataTransfer.files;
-            fileInput.files = files;
-            updateFileDisplay(files);
-        });
-        
-        // File input change
-        fileInput.addEventListener('change', (e) => {
-            updateFileDisplay(e.target.files);
-        });
-    }
+  const fileInput = document.getElementById("attachment");
+  const uploadArea = document.querySelector(".upload-area");
+
+  if (fileInput && uploadArea) {
+    // Drag and drop functionality
+    uploadArea.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      uploadArea.style.borderColor = "#059669";
+      uploadArea.style.background = "#f0fdf4";
+    });
+
+    uploadArea.addEventListener("dragleave", () => {
+      uploadArea.style.borderColor = "#d1d5db";
+      uploadArea.style.background = "#fafafa";
+    });
+
+    uploadArea.addEventListener("drop", (e) => {
+      e.preventDefault();
+      uploadArea.style.borderColor = "#d1d5db";
+      uploadArea.style.background = "#fafafa";
+
+      const files = e.dataTransfer.files;
+      fileInput.files = files;
+      updateFileDisplay(files);
+    });
+
+    // File input change
+    fileInput.addEventListener("change", (e) => {
+      updateFileDisplay(e.target.files);
+    });
+  }
 }
 
 function updateFileDisplay(files) {
-    const uploadArea = document.querySelector('.upload-area');
-    
-    if (files.length > 0) {
-        const fileList = Array.from(files).map(file => file.name).join(', ');
-        uploadArea.innerHTML = `
+  const uploadArea = document.querySelector(".upload-area");
+
+  if (files.length > 0) {
+    const fileList = Array.from(files)
+      .map((file) => file.name)
+      .join(", ");
+    uploadArea.innerHTML = `
             <i class="fas fa-check-circle" style="color: #10b981;"></i>
             <span style="color: #059669; font-weight: 600;">${files.length} file(s) selected</span>
             <div style="font-size: 0.8rem; color: #6b7280; margin-top: 0.5rem;">${fileList}</div>
         `;
-    }
+  }
 }
 
 // Form Data Persistence
 function saveFormData() {
-    const form = document.getElementById('supportForm');
-    if (form) {
-        const formData = new FormData(form);
-        const data = {};
-        
-        for (let [key, value] of formData.entries()) {
-            data[key] = value;
-        }
-        
-        localStorage.setItem('nnec_support_form', JSON.stringify(data));
+  const form = document.getElementById("supportForm");
+  if (form) {
+    const formData = new FormData(form);
+    const data = {};
+
+    for (let [key, value] of formData.entries()) {
+      data[key] = value;
     }
+
+    localStorage.setItem("NMCN_support_form", JSON.stringify(data));
+  }
 }
 
 function loadFormData() {
-    const savedData = localStorage.getItem('nnec_support_form');
-    if (savedData) {
-        const data = JSON.parse(savedData);
-        const form = document.getElementById('supportForm');
-        
-        if (form) {
-            Object.keys(data).forEach(key => {
-                const field = form.querySelector(`[name="${key}"]`);
-                if (field && data[key]) {
-                    field.value = data[key];
-                }
-            });
+  const savedData = localStorage.getItem("NMCN_support_form");
+  if (savedData) {
+    const data = JSON.parse(savedData);
+    const form = document.getElementById("supportForm");
+
+    if (form) {
+      Object.keys(data).forEach((key) => {
+        const field = form.querySelector(`[name="${key}"]`);
+        if (field && data[key]) {
+          field.value = data[key];
         }
+      });
     }
+  }
 }
 
 function clearFormData() {
-    localStorage.removeItem('nnec_support_form');
+  localStorage.removeItem("NMCN_support_form");
 }

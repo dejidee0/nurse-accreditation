@@ -1,462 +1,617 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - Nigerian Nursing Excellence Council</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="faq.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - Nursing & Midwifery Council of Nigeria</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="faq.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Header -->
     <header class="header">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-heart-pulse"></i>
-                    </div>
-                    <div class="logo-text">
-                        <h1>NNEC</h1>
-                        <p>Nigerian Nursing Excellence Council</p>
-                    </div>
-                </div>
-                
-                <nav class="nav-menu" id="navMenu">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="register.html" class="nav-link">Register</a>
-                    <a href="support.html" class="nav-link">Get Support</a>
-                    <a href="dashboard.html" class="nav-link login-btn">Login</a>
-                </nav>
-                
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
+      <div class="container">
+        <div class="nav-wrapper">
+          <div class="logo">
+            <div class="logo-icon">
+              <i class="fas fa-heart-pulse"></i>
             </div>
+            <div class="logo-text">
+              <h1>NMCN</h1>
+              <p>Nursing & Midwifery Council of Nigeria</p>
+            </div>
+          </div>
+
+          <nav class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="register.html" class="nav-link">Register</a>
+            <a href="support.html" class="nav-link">Get Support</a>
+            <a href="dashboard.html" class="nav-link login-btn">Login</a>
+          </nav>
+
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
+      </div>
     </header>
 
     <!-- FAQ Hero -->
     <section class="faq-hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Frequently Asked Questions</h1>
-                <p>Find quick answers to common questions about NNEC services, registration, and examinations</p>
-                
-                <!-- Search Bar -->
-                <div class="faq-search">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Search for answers..." id="faqSearch">
-                    </div>
-                </div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>Frequently Asked Questions</h1>
+          <p>
+            Find quick answers to common questions about NMCN services,
+            registration, and examinations
+          </p>
+
+          <!-- Search Bar -->
+          <div class="faq-search">
+            <div class="search-box">
+              <i class="fas fa-search"></i>
+              <input
+                type="text"
+                placeholder="Search for answers..."
+                id="faqSearch"
+              />
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- FAQ Categories -->
     <section class="faq-categories">
-        <div class="container">
-            <div class="categories-grid">
-                <button class="category-btn active" data-category="all">
-                    <i class="fas fa-th-large"></i>
-                    <span>All Questions</span>
-                </button>
-                <button class="category-btn" data-category="registration">
-                    <i class="fas fa-user-plus"></i>
-                    <span>Registration</span>
-                </button>
-                <button class="category-btn" data-category="payment">
-                    <i class="fas fa-credit-card"></i>
-                    <span>Payment</span>
-                </button>
-                <button class="category-btn" data-category="exams">
-                    <i class="fas fa-clipboard-list"></i>
-                    <span>Examinations</span>
-                </button>
-                <button class="category-btn" data-category="certificates">
-                    <i class="fas fa-certificate"></i>
-                    <span>Certificates</span>
-                </button>
-                <button class="category-btn" data-category="technical">
-                    <i class="fas fa-cog"></i>
-                    <span>Technical</span>
-                </button>
-            </div>
+      <div class="container">
+        <div class="categories-grid">
+          <button class="category-btn active" data-category="all">
+            <i class="fas fa-th-large"></i>
+            <span>All Questions</span>
+          </button>
+          <button class="category-btn" data-category="registration">
+            <i class="fas fa-user-plus"></i>
+            <span>Registration</span>
+          </button>
+          <button class="category-btn" data-category="payment">
+            <i class="fas fa-credit-card"></i>
+            <span>Payment</span>
+          </button>
+          <button class="category-btn" data-category="exams">
+            <i class="fas fa-clipboard-list"></i>
+            <span>Examinations</span>
+          </button>
+          <button class="category-btn" data-category="certificates">
+            <i class="fas fa-certificate"></i>
+            <span>Certificates</span>
+          </button>
+          <button class="category-btn" data-category="technical">
+            <i class="fas fa-cog"></i>
+            <span>Technical</span>
+          </button>
         </div>
+      </div>
     </section>
 
     <!-- FAQ Content -->
     <section class="faq-content">
-        <div class="container">
-            <div class="faq-wrapper">
-                <!-- Registration FAQs -->
-                <div class="faq-section" data-category="registration">
-                    <h2>Registration Questions</h2>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>How do I register as a new nursing professional?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>To register as a new nursing professional:</p>
-                            <ol>
-                                <li>Visit our <a href="register.html">registration page</a></li>
-                                <li>Select your user type (Fresh Applicant - Trained in Nigeria/Abroad)</li>
-                                <li>Fill in your personal information accurately</li>
-                                <li>Upload required documents (ID, certificates, passport photo)</li>
-                                <li>Submit your application and await verification</li>
-                                <li>Complete payment once approved</li>
-                                <li>Receive your index number via email</li>
-                            </ol>
-                            <p>The entire process typically takes 3-5 business days after document submission.</p>
-                        </div>
-                    </div>
+      <div class="container">
+        <div class="faq-wrapper">
+          <!-- Registration FAQs -->
+          <div class="faq-section" data-category="registration">
+            <h2>Registration Questions</h2>
 
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What documents do I need for registration?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Required documents include:</p>
-                            <ul>
-                                <li><strong>Valid ID:</strong> National ID, Driver's License, or International Passport</li>
-                                <li><strong>Nursing Certificate:</strong> Original certificate from your nursing school</li>
-                                <li><strong>Academic Transcript:</strong> Official transcript from your institution</li>
-                                <li><strong>Passport Photograph:</strong> Recent passport-sized photo</li>
-                                <li><strong>Birth Certificate:</strong> For age verification</li>
-                                <li><strong>Additional documents:</strong> May be required based on your training location</li>
-                            </ul>
-                            <p>All documents must be clear, readable, and in English (or officially translated).</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Can I register if I trained abroad?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Yes! We welcome internationally trained nurses. The process includes:</p>
-                            <ul>
-                                <li>Select "Fresh Applicant - Trained Abroad" during registration</li>
-                                <li>Provide credential evaluation from recognized agencies</li>
-                                <li>Submit translated documents (if not in English)</li>
-                                <li>Complete additional verification steps</li>
-                                <li>May require bridging courses depending on your training</li>
-                            </ul>
-                            <p>Processing time for international applicants is typically 7-10 business days.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Payment FAQs -->
-                <div class="faq-section" data-category="payment">
-                    <h2>Payment Questions</h2>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What are the registration and examination fees?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <div class="fee-table">
-                                <h4>Current Fee Structure (2025)</h4>
-                                <table>
-                                    <tr>
-                                        <td>Registration/Indexing Fee</td>
-                                        <td>₦10,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Examination Fee</td>
-                                        <td>₦15,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Certificate Processing</td>
-                                        <td>₦5,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td>International Applicant Fee</td>
-                                        <td>₦25,000</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <p><strong>Note:</strong> Fees are subject to change. Always check current rates during registration.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What payment methods do you accept?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>We accept multiple payment methods for your convenience:</p>
-                            <ul>
-                                <li><strong>Debit/Credit Cards:</strong> Visa, Mastercard, Verve</li>
-                                <li><strong>Bank Transfer:</strong> Direct transfer to our designated accounts</li>
-                                <li><strong>Mobile Money:</strong> All major mobile payment platforms</li>
-                                <li><strong>Online Banking:</strong> Internet banking from all major banks</li>
-                                <li><strong>USSD Payments:</strong> Quick dial codes for instant payment</li>
-                            </ul>
-                            <p>All payments are processed securely with bank-level encryption.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Can I get a refund if I cancel my application?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Refund policy varies by stage:</p>
-                            <ul>
-                                <li><strong>Before Processing:</strong> 100% refund (minus processing fee)</li>
-                                <li><strong>During Review:</strong> 75% refund available</li>
-                                <li><strong>After Approval:</strong> 50% refund (administrative costs apply)</li>
-                                <li><strong>After Examination:</strong> No refund available</li>
-                            </ul>
-                            <p>Refund requests must be submitted within 30 days with valid reasons.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Examination FAQs -->
-                <div class="faq-section" data-category="exams">
-                    <h2>Examination Questions</h2>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>When are examinations conducted?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <div class="exam-schedule">
-                                <h4>2025 Examination Schedule</h4>
-                                <div class="schedule-grid">
-                                    <div class="schedule-item">
-                                        <div class="month">July</div>
-                                        <div class="dates">15, 22, 29</div>
-                                        <div class="note">Regular Sessions</div>
-                                    </div>
-                                    <div class="schedule-item">
-                                        <div class="month">August</div>
-                                        <div class="dates">5, 12, 19, 26</div>
-                                        <div class="note">Peak Season</div>
-                                    </div>
-                                    <div class="schedule-item">
-                                        <div class="month">September</div>
-                                        <div class="dates">2, 9, 16, 23</div>
-                                        <div class="note">Regular Sessions</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <p>Registration closes 2 weeks before each examination date.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What should I expect during the examination?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>The NNEC examination consists of:</p>
-                            <ul>
-                                <li><strong>Duration:</strong> 3 hours (180 minutes)</li>
-                                <li><strong>Format:</strong> Multiple choice and scenario-based questions</li>
-                                <li><strong>Sections:</strong> Clinical Practice, Ethics, Patient Safety, Legal Issues</li>
-                                <li><strong>Passing Score:</strong> 70% minimum</li>
-                                <li><strong>Results:</strong> Available within 48 hours</li>
-                            </ul>
-                            <p>Bring valid ID, examination slip, and writing materials. Electronic devices are not permitted.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>What happens if I fail the examination?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>If you don't pass on your first attempt:</p>
-                            <ul>
-                                <li>You'll receive detailed feedback on areas for improvement</li>
-                                <li>Retake opportunities are available in the next examination cycle</li>
-                                <li>Additional study materials and resources will be provided</li>
-                                <li>One-on-one counseling sessions are available</li>
-                                <li>Retake fee applies (₦10,000)</li>
-                            </ul>
-                            <p>Most candidates pass on their second attempt with proper preparation.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Certificate FAQs -->
-                <div class="faq-section" data-category="certificates">
-                    <h2>Certificate Questions</h2>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>How do I download my certificate?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>To download your certificate:</p>
-                            <ol>
-                                <li>Log into your <a href="dashboard.html">dashboard</a></li>
-                                <li>Navigate to the "Certificates" section</li>
-                                <li>Click "Download" next to your certificate</li>
-                                <li>Enter your verification PIN (sent via SMS/email)</li>
-                                <li>Download the PDF certificate</li>
-                            </ol>
-                            <p>Certificates are available for download within 24 hours of passing your examination.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>How can employers verify my certificate?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Certificate verification options:</p>
-                            <ul>
-                                <li><strong>Online Verification:</strong> Visit our verification portal</li>
-                                <li><strong>QR Code:</strong> Scan the QR code on your certificate</li>
-                                <li><strong>Certificate Number:</strong> Enter your unique certificate number</li>
-                                <li><strong>Phone Verification:</strong> Call +234 800 NNEC (6632)</li>
-                                <li><strong>Email Verification:</strong> Send request to verify@nnec.ng</li>
-                            </ul>
-                            <p>All certificates include security features to prevent forgery.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Technical FAQs -->
-                <div class="faq-section" data-category="technical">
-                    <h2>Technical Questions</h2>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>I'm having trouble uploading documents. What should I do?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Common solutions for upload issues:</p>
-                            <ul>
-                                <li><strong>File Size:</strong> Ensure files are under 5MB each</li>
-                                <li><strong>File Format:</strong> Use JPG, PNG, or PDF formats only</li>
-                                <li><strong>Internet Connection:</strong> Check your internet stability</li>
-                                <li><strong>Browser:</strong> Try a different browser (Chrome, Firefox, Safari)</li>
-                                <li><strong>Clear Cache:</strong> Clear browser cache and cookies</li>
-                                <li><strong>Disable Extensions:</strong> Temporarily disable browser extensions</li>
-                            </ul>
-                            <p>If issues persist, contact our technical support team.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>Can I access my account from multiple devices?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Yes, you can access your NNEC account from multiple devices:</p>
-                            <ul>
-                                <li>Desktop computers and laptops</li>
-                                <li>Tablets and mobile phones</li>
-                                <li>Any device with internet access</li>
-                                <li>Automatic synchronization across devices</li>
-                                <li>Secure login with two-factor authentication</li>
-                            </ul>
-                            <p>Always log out from public or shared devices for security.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>How do I register as a new nursing professional?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>To register as a new nursing professional:</p>
+                <ol>
+                  <li>
+                    Visit our <a href="register.html">registration page</a>
+                  </li>
+                  <li>
+                    Select your user type (Fresh Applicant - Trained in
+                    Nigeria/Abroad)
+                  </li>
+                  <li>Fill in your personal information accurately</li>
+                  <li>
+                    Upload required documents (ID, certificates, passport photo)
+                  </li>
+                  <li>Submit your application and await verification</li>
+                  <li>Complete payment once approved</li>
+                  <li>Receive your index number via email</li>
+                </ol>
+                <p>
+                  The entire process typically takes 3-5 business days after
+                  document submission.
+                </p>
+              </div>
             </div>
 
-            <!-- Still Need Help -->
-            <div class="help-section">
-                <div class="help-card">
-                    <div class="help-icon">
-                        <i class="fas fa-question-circle"></i>
-                    </div>
-                    <div class="help-content">
-                        <h3>Still Need Help?</h3>
-                        <p>Can't find the answer you're looking for? Our support team is here to help you 24/7.</p>
-                        <div class="help-actions">
-                            <a href="support.html" class="btn btn-primary">Contact Support</a>
-                            <button class="btn btn-outline" id="startChat">Live Chat</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>What documents do I need for registration?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>Required documents include:</p>
+                <ul>
+                  <li>
+                    <strong>Valid ID:</strong> National ID, Driver's License, or
+                    International Passport
+                  </li>
+                  <li>
+                    <strong>Nursing Certificate:</strong> Original certificate
+                    from your nursing school
+                  </li>
+                  <li>
+                    <strong>Academic Transcript:</strong> Official transcript
+                    from your institution
+                  </li>
+                  <li>
+                    <strong>Passport Photograph:</strong> Recent passport-sized
+                    photo
+                  </li>
+                  <li>
+                    <strong>Birth Certificate:</strong> For age verification
+                  </li>
+                  <li>
+                    <strong>Additional documents:</strong> May be required based
+                    on your training location
+                  </li>
+                </ul>
+                <p>
+                  All documents must be clear, readable, and in English (or
+                  officially translated).
+                </p>
+              </div>
             </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Can I register if I trained abroad?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes! We welcome internationally trained nurses. The process
+                  includes:
+                </p>
+                <ul>
+                  <li>
+                    Select "Fresh Applicant - Trained Abroad" during
+                    registration
+                  </li>
+                  <li>
+                    Provide credential evaluation from recognized agencies
+                  </li>
+                  <li>Submit translated documents (if not in English)</li>
+                  <li>Complete additional verification steps</li>
+                  <li>
+                    May require bridging courses depending on your training
+                  </li>
+                </ul>
+                <p>
+                  Processing time for international applicants is typically 7-10
+                  business days.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment FAQs -->
+          <div class="faq-section" data-category="payment">
+            <h2>Payment Questions</h2>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>What are the registration and examination fees?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <div class="fee-table">
+                  <h4>Current Fee Structure (2025)</h4>
+                  <table>
+                    <tr>
+                      <td>Registration/Indexing Fee</td>
+                      <td>₦10,000</td>
+                    </tr>
+                    <tr>
+                      <td>Examination Fee</td>
+                      <td>₦15,000</td>
+                    </tr>
+                    <tr>
+                      <td>Certificate Processing</td>
+                      <td>₦5,000</td>
+                    </tr>
+                    <tr>
+                      <td>International Applicant Fee</td>
+                      <td>₦25,000</td>
+                    </tr>
+                  </table>
+                </div>
+                <p>
+                  <strong>Note:</strong> Fees are subject to change. Always
+                  check current rates during registration.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>What payment methods do you accept?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>We accept multiple payment methods for your convenience:</p>
+                <ul>
+                  <li>
+                    <strong>Debit/Credit Cards:</strong> Visa, Mastercard, Verve
+                  </li>
+                  <li>
+                    <strong>Bank Transfer:</strong> Direct transfer to our
+                    designated accounts
+                  </li>
+                  <li>
+                    <strong>Mobile Money:</strong> All major mobile payment
+                    platforms
+                  </li>
+                  <li>
+                    <strong>Online Banking:</strong> Internet banking from all
+                    major banks
+                  </li>
+                  <li>
+                    <strong>USSD Payments:</strong> Quick dial codes for instant
+                    payment
+                  </li>
+                </ul>
+                <p>
+                  All payments are processed securely with bank-level
+                  encryption.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Can I get a refund if I cancel my application?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>Refund policy varies by stage:</p>
+                <ul>
+                  <li>
+                    <strong>Before Processing:</strong> 100% refund (minus
+                    processing fee)
+                  </li>
+                  <li><strong>During Review:</strong> 75% refund available</li>
+                  <li>
+                    <strong>After Approval:</strong> 50% refund (administrative
+                    costs apply)
+                  </li>
+                  <li>
+                    <strong>After Examination:</strong> No refund available
+                  </li>
+                </ul>
+                <p>
+                  Refund requests must be submitted within 30 days with valid
+                  reasons.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Examination FAQs -->
+          <div class="faq-section" data-category="exams">
+            <h2>Examination Questions</h2>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>When are examinations conducted?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <div class="exam-schedule">
+                  <h4>2025 Examination Schedule</h4>
+                  <div class="schedule-grid">
+                    <div class="schedule-item">
+                      <div class="month">July</div>
+                      <div class="dates">15, 22, 29</div>
+                      <div class="note">Regular Sessions</div>
+                    </div>
+                    <div class="schedule-item">
+                      <div class="month">August</div>
+                      <div class="dates">5, 12, 19, 26</div>
+                      <div class="note">Peak Season</div>
+                    </div>
+                    <div class="schedule-item">
+                      <div class="month">September</div>
+                      <div class="dates">2, 9, 16, 23</div>
+                      <div class="note">Regular Sessions</div>
+                    </div>
+                  </div>
+                </div>
+                <p>Registration closes 2 weeks before each examination date.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>What should I expect during the examination?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>The NMCN examination consists of:</p>
+                <ul>
+                  <li><strong>Duration:</strong> 3 hours (180 minutes)</li>
+                  <li>
+                    <strong>Format:</strong> Multiple choice and scenario-based
+                    questions
+                  </li>
+                  <li>
+                    <strong>Sections:</strong> Clinical Practice, Ethics,
+                    Patient Safety, Legal Issues
+                  </li>
+                  <li><strong>Passing Score:</strong> 70% minimum</li>
+                  <li><strong>Results:</strong> Available within 48 hours</li>
+                </ul>
+                <p>
+                  Bring valid ID, examination slip, and writing materials.
+                  Electronic devices are not permitted.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>What happens if I fail the examination?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>If you don't pass on your first attempt:</p>
+                <ul>
+                  <li>
+                    You'll receive detailed feedback on areas for improvement
+                  </li>
+                  <li>
+                    Retake opportunities are available in the next examination
+                    cycle
+                  </li>
+                  <li>
+                    Additional study materials and resources will be provided
+                  </li>
+                  <li>One-on-one counseling sessions are available</li>
+                  <li>Retake fee applies (₦10,000)</li>
+                </ul>
+                <p>
+                  Most candidates pass on their second attempt with proper
+                  preparation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate FAQs -->
+          <div class="faq-section" data-category="certificates">
+            <h2>Certificate Questions</h2>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>How do I download my certificate?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>To download your certificate:</p>
+                <ol>
+                  <li>Log into your <a href="dashboard.html">dashboard</a></li>
+                  <li>Navigate to the "Certificates" section</li>
+                  <li>Click "Download" next to your certificate</li>
+                  <li>Enter your verification PIN (sent via SMS/email)</li>
+                  <li>Download the PDF certificate</li>
+                </ol>
+                <p>
+                  Certificates are available for download within 24 hours of
+                  passing your examination.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>How can employers verify my certificate?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>Certificate verification options:</p>
+                <ul>
+                  <li>
+                    <strong>Online Verification:</strong> Visit our verification
+                    portal
+                  </li>
+                  <li>
+                    <strong>QR Code:</strong> Scan the QR code on your
+                    certificate
+                  </li>
+                  <li>
+                    <strong>Certificate Number:</strong> Enter your unique
+                    certificate number
+                  </li>
+                  <li>
+                    <strong>Phone Verification:</strong> Call +234 800 NMCN
+                    (6632)
+                  </li>
+                  <li>
+                    <strong>Email Verification:</strong> Send request to
+                    verify@NMCN.ng
+                  </li>
+                </ul>
+                <p>
+                  All certificates include security features to prevent forgery.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical FAQs -->
+          <div class="faq-section" data-category="technical">
+            <h2>Technical Questions</h2>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>
+                  I'm having trouble uploading documents. What should I do?
+                </h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>Common solutions for upload issues:</p>
+                <ul>
+                  <li>
+                    <strong>File Size:</strong> Ensure files are under 5MB each
+                  </li>
+                  <li>
+                    <strong>File Format:</strong> Use JPG, PNG, or PDF formats
+                    only
+                  </li>
+                  <li>
+                    <strong>Internet CoNMCNtion:</strong> Check your internet
+                    stability
+                  </li>
+                  <li>
+                    <strong>Browser:</strong> Try a different browser (Chrome,
+                    Firefox, Safari)
+                  </li>
+                  <li>
+                    <strong>Clear Cache:</strong> Clear browser cache and
+                    cookies
+                  </li>
+                  <li>
+                    <strong>Disable Extensions:</strong> Temporarily disable
+                    browser extensions
+                  </li>
+                </ul>
+                <p>If issues persist, contact our technical support team.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Can I access my account from multiple devices?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes, you can access your NMCN account from multiple devices:
+                </p>
+                <ul>
+                  <li>Desktop computers and laptops</li>
+                  <li>Tablets and mobile phones</li>
+                  <li>Any device with internet access</li>
+                  <li>Automatic synchronization across devices</li>
+                  <li>Secure login with two-factor authentication</li>
+                </ul>
+                <p>
+                  Always log out from public or shared devices for security.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Still Need Help -->
+        <div class="help-section">
+          <div class="help-card">
+            <div class="help-icon">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <div class="help-content">
+              <h3>Still Need Help?</h3>
+              <p>
+                Can't find the answer you're looking for? Our support team is
+                here to help you 24/7.
+              </p>
+              <div class="help-actions">
+                <a href="support.html" class="btn btn-primary"
+                  >Contact Support</a
+                >
+                <button class="btn btn-outline" id="startChat">
+                  Live Chat
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-heart-pulse"></i>
-                        </div>
-                        <div class="logo-text">
-                            <h3>NNEC</h3>
-                            <p>Nigerian Nursing Excellence Council</p>
-                        </div>
-                    </div>
-                    <p class="footer-desc">
-                        Elevating nursing and midwifery standards across Nigeria through professional 
-                        excellence, continuous education, and innovative healthcare solutions.
-                    </p>
-                    <p class="footer-copy">
-                        © 2025 Nigerian Nursing Excellence Council. Powered by SW Global
-                    </p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="register.html">Register</a></li>
-                        <li><a href="support.html">Support</a></li>
-                        <li><a href="dashboard.html">Dashboard</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Support Options</h4>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>support@nnec.ng</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+234 800 NNEC (6632)</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-comments"></i>
-                            <span>Live Chat (24/7)</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <div class="logo-icon">
+                <i class="fas fa-heart-pulse"></i>
+              </div>
+              <div class="logo-text">
+                <h3>NMCN</h3>
+                <p>Nursing & Midwifery Council of Nigeria</p>
+              </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>Trusted by over 300,000 certified professionals across Nigeria</p>
+            <p class="footer-desc">
+              Elevating nursing and midwifery standards across Nigeria through
+              professional excellence, continuous education, and innovative
+              healthcare solutions.
+            </p>
+            <p class="footer-copy">
+              © 2025 Nursing & Midwifery Council of Nigeria. Powered by SW
+              Global
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="register.html">Register</a></li>
+              <li><a href="support.html">Support</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Support Options</h4>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>support@NMCN.ng</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+234 800 NMCN (6632)</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-comments"></i>
+                <span>Live Chat (24/7)</span>
+              </div>
             </div>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <p>Trusted by over 300,000 certified professionals across Nigeria</p>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
     <script src="faq.js"></script>
-</body>
+  </body>
 </html>

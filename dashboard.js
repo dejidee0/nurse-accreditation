@@ -1,128 +1,128 @@
 // Dashboard JavaScript
 
-document.addEventListener('DOMContentLoaded', () => {
-    initializeDashboard();
+document.addEventListener("DOMContentLoaded", () => {
+  initializeDashboard();
 });
 
 function initializeDashboard() {
-    setupUserMenu();
-    setupCountdowns();
-    setupQuickActions();
-    setupNotifications();
-    setupAssistant();
-    setupServiceRating();
-    updateDashboardData();
+  setupUserMenu();
+  setupCountdowns();
+  setupQuickActions();
+  setupNotifications();
+  setupAssistant();
+  setupServiceRating();
+  updateDashboardData();
 }
 
 // User Menu
 function setupUserMenu() {
-    const userMenuBtn = document.getElementById('userMenuBtn');
-    const userDropdown = document.getElementById('userDropdown');
-    
-    if (userMenuBtn && userDropdown) {
-        userMenuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            userDropdown.classList.toggle('active');
-        });
-        
-        // Close dropdown when clicking outside
-        document.addEventListener('click', () => {
-            userDropdown.classList.remove('active');
-        });
-        
-        // Prevent dropdown from closing when clicking inside
-        userDropdown.addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
-    }
+  const userMenuBtn = document.getElementById("userMenuBtn");
+  const userDropdown = document.getElementById("userDropdown");
+
+  if (userMenuBtn && userDropdown) {
+    userMenuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      userDropdown.classList.toggle("active");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", () => {
+      userDropdown.classList.remove("active");
+    });
+
+    // Prevent dropdown from closing when clicking inside
+    userDropdown.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  }
 }
 
 // Countdown Timers
 function setupCountdowns() {
-    const examCountdown = document.getElementById('examCountdown');
-    const daysLeft = document.getElementById('daysLeft');
-    
-    // Calculate days until exam (July 15, 2025)
-    const examDate = new Date('2025-07-15');
-    const today = new Date();
-    const timeDiff = examDate.getTime() - today.getTime();
-    const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
-    
+  const examCountdown = document.getElementById("examCountdown");
+  const daysLeft = document.getElementById("daysLeft");
+
+  // Calculate days until exam (July 15, 2025)
+  const examDate = new Date("2025-07-15");
+  const today = new Date();
+  const timeDiff = examDate.getTime() - today.getTime();
+  const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+  if (examCountdown) {
+    examCountdown.textContent = `${daysDiff} days`;
+  }
+
+  if (daysLeft) {
+    daysLeft.textContent = daysDiff;
+  }
+
+  // Update countdown every hour
+  setInterval(() => {
+    const newToday = new Date();
+    const newTimeDiff = examDate.getTime() - newToday.getTime();
+    const newDaysDiff = Math.ceil(newTimeDiff / (1000 * 3600 * 24));
+
     if (examCountdown) {
-        examCountdown.textContent = `${daysDiff} days`;
+      examCountdown.textContent = `${newDaysDiff} days`;
     }
-    
+
     if (daysLeft) {
-        daysLeft.textContent = daysDiff;
+      daysLeft.textContent = newDaysDiff;
     }
-    
-    // Update countdown every hour
-    setInterval(() => {
-        const newToday = new Date();
-        const newTimeDiff = examDate.getTime() - newToday.getTime();
-        const newDaysDiff = Math.ceil(newTimeDiff / (1000 * 3600 * 24));
-        
-        if (examCountdown) {
-            examCountdown.textContent = `${newDaysDiff} days`;
-        }
-        
-        if (daysLeft) {
-            daysLeft.textContent = newDaysDiff;
-        }
-    }, 3600000); // Update every hour
+  }, 3600000); // Update every hour
 }
 
 // Quick Actions
 function setupQuickActions() {
-    const actionBtns = document.querySelectorAll('.action-btn');
-    
-    actionBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const actionCard = e.target.closest('.action-card');
-            const actionTitle = actionCard.querySelector('h3').textContent;
-            
-            handleQuickAction(actionTitle, btn);
-        });
+  const actionBtns = document.querySelectorAll(".action-btn");
+
+  actionBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const actionCard = e.target.closest(".action-card");
+      const actionTitle = actionCard.querySelector("h3").textContent;
+
+      handleQuickAction(actionTitle, btn);
     });
+  });
 }
 
 function handleQuickAction(actionTitle, button) {
-    const originalText = button.textContent;
-    
-    switch (actionTitle) {
-        case 'Pay Fees':
-            handlePayment(button, originalText);
-            break;
-        case 'Book Exam':
-            handleExamBooking(button, originalText);
-            break;
-        case 'Download Certificate':
-            handleCertificateDownload(button, originalText);
-            break;
-        case 'CPD Activities':
-            handleCPDActivities(button, originalText);
-            break;
-        default:
-            showNotification('Feature coming soon!', 'info');
-    }
+  const originalText = button.textContent;
+
+  switch (actionTitle) {
+    case "Pay Fees":
+      handlePayment(button, originalText);
+      break;
+    case "Book Exam":
+      handleExamBooking(button, originalText);
+      break;
+    case "Download Certificate":
+      handleCertificateDownload(button, originalText);
+      break;
+    case "CPD Activities":
+      handleCPDActivities(button, originalText);
+      break;
+    default:
+      showNotification("Feature coming soon!", "info");
+  }
 }
 
 function handlePayment(button, originalText) {
-    button.disabled = true;
-    button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
-    
-    // Simulate payment process
-    setTimeout(() => {
-        showPaymentModal();
-        button.disabled = false;
-        button.textContent = originalText;
-    }, 2000);
+  button.disabled = true;
+  button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+
+  // Simulate payment process
+  setTimeout(() => {
+    showPaymentModal();
+    button.disabled = false;
+    button.textContent = originalText;
+  }, 2000);
 }
 
 function showPaymentModal() {
-    const modal = document.createElement('div');
-    modal.className = 'payment-modal';
-    modal.innerHTML = `
+  const modal = document.createElement("div");
+  modal.className = "payment-modal";
+  modal.innerHTML = `
         <div class="modal-overlay"></div>
         <div class="modal-content">
             <div class="modal-header">
@@ -158,38 +158,44 @@ function showPaymentModal() {
             </div>
         </div>
     `;
-    
-    document.body.appendChild(modal);
-    
-    // Event listeners
-    modal.querySelector('.modal-close').addEventListener('click', () => modal.remove());
-    modal.querySelector('.modal-cancel').addEventListener('click', () => modal.remove());
-    modal.querySelector('.modal-overlay').addEventListener('click', () => modal.remove());
-    
-    modal.querySelector('#proceedPayment').addEventListener('click', () => {
-        modal.remove();
-        showNotification('Redirecting to payment gateway...', 'info');
-    });
-    
-    // Add payment modal styles
-    addPaymentModalStyles();
+
+  document.body.appendChild(modal);
+
+  // Event listeners
+  modal
+    .querySelector(".modal-close")
+    .addEventListener("click", () => modal.remove());
+  modal
+    .querySelector(".modal-cancel")
+    .addEventListener("click", () => modal.remove());
+  modal
+    .querySelector(".modal-overlay")
+    .addEventListener("click", () => modal.remove());
+
+  modal.querySelector("#proceedPayment").addEventListener("click", () => {
+    modal.remove();
+    showNotification("Redirecting to payment gateway...", "info");
+  });
+
+  // Add payment modal styles
+  addPaymentModalStyles();
 }
 
 function handleExamBooking(button, originalText) {
-    button.disabled = true;
-    button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
-    
-    setTimeout(() => {
-        showExamBookingModal();
-        button.disabled = false;
-        button.textContent = originalText;
-    }, 1500);
+  button.disabled = true;
+  button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+
+  setTimeout(() => {
+    showExamBookingModal();
+    button.disabled = false;
+    button.textContent = originalText;
+  }, 1500);
 }
 
 function showExamBookingModal() {
-    const modal = document.createElement('div');
-    modal.className = 'booking-modal';
-    modal.innerHTML = `
+  const modal = document.createElement("div");
+  modal.className = "booking-modal";
+  modal.innerHTML = `
         <div class="modal-overlay"></div>
         <div class="modal-content">
             <div class="modal-header">
@@ -226,56 +232,60 @@ function showExamBookingModal() {
             </div>
         </div>
     `;
-    
-    document.body.appendChild(modal);
-    
-    // Event listeners
-    modal.querySelector('.modal-close').addEventListener('click', () => modal.remove());
-    modal.querySelector('.modal-overlay').addEventListener('click', () => modal.remove());
-    
-    modal.querySelectorAll('.slot-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            modal.remove();
-            showNotification('Exam slot booked successfully!', 'success');
-        });
+
+  document.body.appendChild(modal);
+
+  // Event listeners
+  modal
+    .querySelector(".modal-close")
+    .addEventListener("click", () => modal.remove());
+  modal
+    .querySelector(".modal-overlay")
+    .addEventListener("click", () => modal.remove());
+
+  modal.querySelectorAll(".slot-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      modal.remove();
+      showNotification("Exam slot booked successfully!", "success");
     });
-    
-    addBookingModalStyles();
+  });
+
+  addBookingModalStyles();
 }
 
 function handleCertificateDownload(button, originalText) {
-    button.disabled = true;
-    button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing...';
-    
-    setTimeout(() => {
-        // Simulate download
-        const link = document.createElement('a');
-        link.href = '#'; // In real app, this would be the certificate URL
-        link.download = 'NNEC_Certificate_John_Doe.pdf';
-        link.click();
-        
-        showNotification('Certificate downloaded successfully!', 'success');
-        
-        button.disabled = false;
-        button.textContent = originalText;
-    }, 2000);
+  button.disabled = true;
+  button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing...';
+
+  setTimeout(() => {
+    // Simulate download
+    const link = document.createElement("a");
+    link.href = "#"; // In real app, this would be the certificate URL
+    link.download = "NMCN_Certificate_John_Doe.pdf";
+    link.click();
+
+    showNotification("Certificate downloaded successfully!", "success");
+
+    button.disabled = false;
+    button.textContent = originalText;
+  }, 2000);
 }
 
 function handleCPDActivities(button, originalText) {
-    button.disabled = true;
-    button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
-    
-    setTimeout(() => {
-        showCPDModal();
-        button.disabled = false;
-        button.textContent = originalText;
-    }, 1500);
+  button.disabled = true;
+  button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+
+  setTimeout(() => {
+    showCPDModal();
+    button.disabled = false;
+    button.textContent = originalText;
+  }, 1500);
 }
 
 function showCPDModal() {
-    const modal = document.createElement('div');
-    modal.className = 'cpd-modal';
-    modal.innerHTML = `
+  const modal = document.createElement("div");
+  modal.className = "cpd-modal";
+  modal.innerHTML = `
         <div class="modal-overlay"></div>
         <div class="modal-content">
             <div class="modal-header">
@@ -319,84 +329,94 @@ function showCPDModal() {
             </div>
         </div>
     `;
-    
-    document.body.appendChild(modal);
-    
-    // Event listeners
-    modal.querySelector('.modal-close').addEventListener('click', () => modal.remove());
-    modal.querySelector('.modal-overlay').addEventListener('click', () => modal.remove());
-    
-    modal.querySelectorAll('.activity-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            modal.remove();
-            showNotification('Registration successful! Check your email for details.', 'success');
-        });
+
+  document.body.appendChild(modal);
+
+  // Event listeners
+  modal
+    .querySelector(".modal-close")
+    .addEventListener("click", () => modal.remove());
+  modal
+    .querySelector(".modal-overlay")
+    .addEventListener("click", () => modal.remove());
+
+  modal.querySelectorAll(".activity-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      modal.remove();
+      showNotification(
+        "Registration successful! Check your email for details.",
+        "success"
+      );
     });
-    
-    addCPDModalStyles();
+  });
+
+  addCPDModalStyles();
 }
 
 // Notifications
 function setupNotifications() {
-    const notificationActions = document.querySelectorAll('.notification-action');
-    
-    notificationActions.forEach(action => {
-        action.addEventListener('click', (e) => {
-            e.preventDefault();
-            const actionText = e.target.textContent;
-            
-            switch (actionText) {
-                case 'Register Now':
-                    showNotification('Redirecting to webinar registration...', 'info');
-                    break;
-                case 'View Receipt':
-                    showNotification('Opening payment receipt...', 'info');
-                    break;
-                case 'Download':
-                    showNotification('Certificate download started...', 'success');
-                    break;
-                default:
-                    showNotification('Feature coming soon!', 'info');
-            }
-        });
+  const notificationActions = document.querySelectorAll(".notification-action");
+
+  notificationActions.forEach((action) => {
+    action.addEventListener("click", (e) => {
+      e.preventDefault();
+      const actionText = e.target.textContent;
+
+      switch (actionText) {
+        case "Register Now":
+          showNotification("Redirecting to webinar registration...", "info");
+          break;
+        case "View Receipt":
+          showNotification("Opening payment receipt...", "info");
+          break;
+        case "Download":
+          showNotification("Certificate download started...", "success");
+          break;
+        default:
+          showNotification("Feature coming soon!", "info");
+      }
     });
+  });
 }
 
 // AI Assistant
 function setupAssistant() {
-    const assistantBtn = document.getElementById('askAssistant');
-    
-    if (assistantBtn) {
-        assistantBtn.addEventListener('click', () => {
-            const chatWidget = document.getElementById('chatWidget');
-            if (chatWidget) {
-                chatWidget.classList.add('active');
-                
-                setTimeout(() => {
-                    if (window.NNEC && window.NNEC.addChatMessage) {
-                        window.NNEC.addChatMessage('Hello! I\'m your NNEC AI Assistant. I can help you with exam schedules, payment issues, certificate downloads, and more. What would you like to know?', false);
-                    }
-                }, 500);
-            }
-        });
-    }
+  const assistantBtn = document.getElementById("askAssistant");
+
+  if (assistantBtn) {
+    assistantBtn.addEventListener("click", () => {
+      const chatWidget = document.getElementById("chatWidget");
+      if (chatWidget) {
+        chatWidget.classList.add("active");
+
+        setTimeout(() => {
+          if (window.NMCN && window.NMCN.addChatMessage) {
+            window.NMCN.addChatMessage(
+              "Hello! I'm your NMCN AI Assistant. I can help you with exam schedules, payment issues, certificate downloads, and more. What would you like to know?",
+              false
+            );
+          }
+        }, 500);
+      }
+    });
+  }
 }
 
 // Service Rating
 function setupServiceRating() {
-    const rateBtn = document.getElementById('rateService');
-    
-    if (rateBtn) {
-        rateBtn.addEventListener('click', () => {
-            showRatingModal();
-        });
-    }
+  const rateBtn = document.getElementById("rateService");
+
+  if (rateBtn) {
+    rateBtn.addEventListener("click", () => {
+      showRatingModal();
+    });
+  }
 }
 
 function showRatingModal() {
-    const modal = document.createElement('div');
-    modal.className = 'rating-modal';
-    modal.innerHTML = `
+  const modal = document.createElement("div");
+  modal.className = "rating-modal";
+  modal.innerHTML = `
         <div class="modal-overlay"></div>
         <div class="modal-content">
             <div class="modal-header">
@@ -405,7 +425,7 @@ function showRatingModal() {
             </div>
             <div class="modal-body">
                 <div class="rating-section">
-                    <h4>How would you rate your experience with NNEC?</h4>
+                    <h4>How would you rate your experience with NMCN?</h4>
                     <div class="star-rating" id="starRating">
                         <i class="fas fa-star" data-rating="1"></i>
                         <i class="fas fa-star" data-rating="2"></i>
@@ -426,123 +446,135 @@ function showRatingModal() {
             </div>
         </div>
     `;
-    
-    document.body.appendChild(modal);
-    
-    // Star rating functionality
-    const stars = modal.querySelectorAll('.star-rating i');
-    const ratingText = modal.getElementById('ratingText');
-    let selectedRating = 0;
-    
-    stars.forEach(star => {
-        star.addEventListener('mouseover', () => {
-            const rating = parseInt(star.dataset.rating);
-            highlightStars(stars, rating);
-        });
-        
-        star.addEventListener('click', () => {
-            selectedRating = parseInt(star.dataset.rating);
-            updateRatingText(ratingText, selectedRating);
-        });
+
+  document.body.appendChild(modal);
+
+  // Star rating functionality
+  const stars = modal.querySelectorAll(".star-rating i");
+  const ratingText = modal.getElementById("ratingText");
+  let selectedRating = 0;
+
+  stars.forEach((star) => {
+    star.addEventListener("mouseover", () => {
+      const rating = parseInt(star.dataset.rating);
+      highlightStars(stars, rating);
     });
-    
-    modal.addEventListener('mouseleave', () => {
-        highlightStars(stars, selectedRating);
+
+    star.addEventListener("click", () => {
+      selectedRating = parseInt(star.dataset.rating);
+      updateRatingText(ratingText, selectedRating);
     });
-    
-    // Event listeners
-    modal.querySelector('.modal-close').addEventListener('click', () => modal.remove());
-    modal.querySelector('.modal-cancel').addEventListener('click', () => modal.remove());
-    modal.querySelector('.modal-overlay').addEventListener('click', () => modal.remove());
-    
-    modal.querySelector('#submitRating').addEventListener('click', () => {
-        if (selectedRating > 0) {
-            modal.remove();
-            showNotification('Thank you for your feedback!', 'success');
-        } else {
-            showNotification('Please select a rating first.', 'error');
-        }
-    });
-    
-    addRatingModalStyles();
+  });
+
+  modal.addEventListener("mouseleave", () => {
+    highlightStars(stars, selectedRating);
+  });
+
+  // Event listeners
+  modal
+    .querySelector(".modal-close")
+    .addEventListener("click", () => modal.remove());
+  modal
+    .querySelector(".modal-cancel")
+    .addEventListener("click", () => modal.remove());
+  modal
+    .querySelector(".modal-overlay")
+    .addEventListener("click", () => modal.remove());
+
+  modal.querySelector("#submitRating").addEventListener("click", () => {
+    if (selectedRating > 0) {
+      modal.remove();
+      showNotification("Thank you for your feedback!", "success");
+    } else {
+      showNotification("Please select a rating first.", "error");
+    }
+  });
+
+  addRatingModalStyles();
 }
 
 function highlightStars(stars, rating) {
-    stars.forEach((star, index) => {
-        if (index < rating) {
-            star.style.color = '#fbbf24';
-        } else {
-            star.style.color = '#d1d5db';
-        }
-    });
+  stars.forEach((star, index) => {
+    if (index < rating) {
+      star.style.color = "#fbbf24";
+    } else {
+      star.style.color = "#d1d5db";
+    }
+  });
 }
 
 function updateRatingText(textElement, rating) {
-    const ratingTexts = {
-        1: 'Poor',
-        2: 'Fair',
-        3: 'Good',
-        4: 'Very Good',
-        5: 'Excellent'
-    };
-    
-    textElement.textContent = ratingTexts[rating] || 'Click to rate';
+  const ratingTexts = {
+    1: "Poor",
+    2: "Fair",
+    3: "Good",
+    4: "Very Good",
+    5: "Excellent",
+  };
+
+  textElement.textContent = ratingTexts[rating] || "Click to rate";
 }
 
 // Update Dashboard Data
 function updateDashboardData() {
-    // Simulate real-time updates
-    setInterval(() => {
-        // Update notification timestamps
-        const timeElements = document.querySelectorAll('.time');
-        timeElements.forEach(element => {
-            // This would normally fetch real data
-            // For demo, we'll just update the display
-        });
-        
-        // Update progress bars with animation
-        const progressBars = document.querySelectorAll('.progress-fill');
-        progressBars.forEach(bar => {
-            const currentWidth = parseInt(bar.style.width);
-            if (currentWidth < 100) {
-                // Simulate progress updates
-            }
-        });
-    }, 60000); // Update every minute
+  // Simulate real-time updates
+  setInterval(() => {
+    // Update notification timestamps
+    const timeElements = document.querySelectorAll(".time");
+    timeElements.forEach((element) => {
+      // This would normally fetch real data
+      // For demo, we'll just update the display
+    });
+
+    // Update progress bars with animation
+    const progressBars = document.querySelectorAll(".progress-fill");
+    progressBars.forEach((bar) => {
+      const currentWidth = parseInt(bar.style.width);
+      if (currentWidth < 100) {
+        // Simulate progress updates
+      }
+    });
+  }, 60000); // Update every minute
 }
 
 // Utility Functions
-function showNotification(message, type = 'info') {
-    const notification = document.createElement('div');
-    notification.className = `dashboard-notification notification-${type}`;
-    notification.innerHTML = `
+function showNotification(message, type = "info") {
+  const notification = document.createElement("div");
+  notification.className = `dashboard-notification notification-${type}`;
+  notification.innerHTML = `
         <div class="notification-content">
-            <i class="fas fa-${type === 'error' ? 'exclamation-triangle' : type === 'success' ? 'check-circle' : 'info-circle'}"></i>
+            <i class="fas fa-${
+              type === "error"
+                ? "exclamation-triangle"
+                : type === "success"
+                ? "check-circle"
+                : "info-circle"
+            }"></i>
             <span>${message}</span>
         </div>
         <button class="notification-close" onclick="this.parentElement.remove()">
             <i class="fas fa-times"></i>
         </button>
     `;
-    
-    document.body.appendChild(notification);
-    
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-        if (notification.parentElement) {
-            notification.remove();
-        }
-    }, 5000);
-    
-    // Add notification styles if not already added
-    addNotificationStyles();
+
+  document.body.appendChild(notification);
+
+  // Auto remove after 5 seconds
+  setTimeout(() => {
+    if (notification.parentElement) {
+      notification.remove();
+    }
+  }, 5000);
+
+  // Add notification styles if not already added
+  addNotificationStyles();
 }
 
 // Add Modal Styles
 function addPaymentModalStyles() {
-    if (document.querySelector('#payment-modal-styles')) return;
-    
-    const styles = `
+  if (document.querySelector("#payment-modal-styles")) return;
+
+  const styles = `
         .payment-modal {
             position: fixed;
             top: 0;
@@ -622,17 +654,17 @@ function addPaymentModalStyles() {
             cursor: pointer;
         }
     `;
-    
-    const style = document.createElement('style');
-    style.id = 'payment-modal-styles';
-    style.textContent = styles;
-    document.head.appendChild(style);
+
+  const style = document.createElement("style");
+  style.id = "payment-modal-styles";
+  style.textContent = styles;
+  document.head.appendChild(style);
 }
 
 function addBookingModalStyles() {
-    if (document.querySelector('#booking-modal-styles')) return;
-    
-    const styles = `
+  if (document.querySelector("#booking-modal-styles")) return;
+
+  const styles = `
         .booking-modal .modal-content {
             max-width: 800px;
         }
@@ -691,17 +723,17 @@ function addBookingModalStyles() {
             width: 100%;
         }
     `;
-    
-    const style = document.createElement('style');
-    style.id = 'booking-modal-styles';
-    style.textContent = styles;
-    document.head.appendChild(style);
+
+  const style = document.createElement("style");
+  style.id = "booking-modal-styles";
+  style.textContent = styles;
+  document.head.appendChild(style);
 }
 
 function addCPDModalStyles() {
-    if (document.querySelector('#cpd-modal-styles')) return;
-    
-    const styles = `
+  if (document.querySelector("#cpd-modal-styles")) return;
+
+  const styles = `
         .cpd-progress {
             margin-bottom: 2rem;
         }
@@ -752,17 +784,17 @@ function addCPDModalStyles() {
             font-weight: 600;
         }
     `;
-    
-    const style = document.createElement('style');
-    style.id = 'cpd-modal-styles';
-    style.textContent = styles;
-    document.head.appendChild(style);
+
+  const style = document.createElement("style");
+  style.id = "cpd-modal-styles";
+  style.textContent = styles;
+  document.head.appendChild(style);
 }
 
 function addRatingModalStyles() {
-    if (document.querySelector('#rating-modal-styles')) return;
-    
-    const styles = `
+  if (document.querySelector("#rating-modal-styles")) return;
+
+  const styles = `
         .rating-section {
             text-align: center;
             margin-bottom: 2rem;
@@ -819,17 +851,17 @@ function addRatingModalStyles() {
             cursor: pointer;
         }
     `;
-    
-    const style = document.createElement('style');
-    style.id = 'rating-modal-styles';
-    style.textContent = styles;
-    document.head.appendChild(style);
+
+  const style = document.createElement("style");
+  style.id = "rating-modal-styles";
+  style.textContent = styles;
+  document.head.appendChild(style);
 }
 
 function addNotificationStyles() {
-    if (document.querySelector('#dashboard-notification-styles')) return;
-    
-    const styles = `
+  if (document.querySelector("#dashboard-notification-styles")) return;
+
+  const styles = `
         .dashboard-notification {
             position: fixed;
             top: 2rem;
@@ -874,9 +906,9 @@ function addNotificationStyles() {
             margin-left: 1rem;
         }
     `;
-    
-    const style = document.createElement('style');
-    style.id = 'dashboard-notification-styles';
-    style.textContent = styles;
-    document.head.appendChild(style);
+
+  const style = document.createElement("style");
+  style.id = "dashboard-notification-styles";
+  style.textContent = styles;
+  document.head.appendChild(style);
 }

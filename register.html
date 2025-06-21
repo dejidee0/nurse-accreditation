@@ -1,499 +1,670 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - Nigerian Nursing Excellence Council</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="register.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Nursing & Midwifery Council of Nigeria</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="register.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Header -->
     <header class="header">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-heart-pulse"></i>
-                    </div>
-                    <div class="logo-text">
-                        <h1>NNEC</h1>
-                        <p>Nigerian Nursing Excellence Council</p>
-                    </div>
-                </div>
-                
-                <nav class="nav-menu" id="navMenu">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="#faq" class="nav-link">FAQ</a>
-                    <a href="support.html" class="nav-link">Get Support</a>
-                    <a href="dashboard.html" class="nav-link login-btn">Login</a>
-                </nav>
-                
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
+      <div class="container">
+        <div class="nav-wrapper">
+          <div class="logo">
+            <div class="logo-icon">
+              <i class="fas fa-heart-pulse"></i>
             </div>
+            <div class="logo-text">
+              <h1>NMCN</h1>
+              <p>Nursing & Midwifery Council of Nigeria</p>
+            </div>
+          </div>
+
+          <nav class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="support.html" class="nav-link">Get Support</a>
+            <a href="dashboard.html" class="nav-link login-btn">Login</a>
+          </nav>
+
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
+      </div>
     </header>
 
     <!-- Registration Section -->
     <section class="registration-section">
-        <div class="container">
-            <div class="registration-wrapper">
-                <!-- Progress Tracker -->
-                <div class="progress-tracker">
-                    <div class="progress-step active" data-step="1">
-                        <div class="step-number">1</div>
-                        <div class="step-label">User Type</div>
-                    </div>
-                    <div class="progress-step" data-step="2">
-                        <div class="step-number">2</div>
-                        <div class="step-label">Personal Info</div>
-                    </div>
-                    <div class="progress-step" data-step="3">
-                        <div class="step-number">3</div>
-                        <div class="step-label">Documents</div>
-                    </div>
-                </div>
-
-                <!-- Registration Form -->
-                <div class="registration-form">
-                    <!-- Step 1: User Type Selection -->
-                    <div class="form-step active" id="step1">
-                        <div class="step-header">
-                            <h2>Choose Your Registration Type</h2>
-                            <p>Select the option that best describes your situation</p>
-                        </div>
-
-                        <div class="user-type-selection">
-                            <div class="user-type-category">
-                                <h3>Fresh Applicants</h3>
-                                <div class="user-type-options">
-                                    <label class="user-type-option">
-                                        <input type="radio" name="userType" value="fresh-nigeria">
-                                        <div class="option-content">
-                                            <div class="option-icon">
-                                                <i class="fas fa-flag"></i>
-                                            </div>
-                                            <div class="option-text">
-                                                <h4>Trained in Nigeria</h4>
-                                                <p>For graduates from Nigerian nursing schools</p>
-                                            </div>
-                                        </div>
-                                    </label>
-
-                                    <label class="user-type-option">
-                                        <input type="radio" name="userType" value="fresh-abroad">
-                                        <div class="option-content">
-                                            <div class="option-icon">
-                                                <i class="fas fa-globe"></i>
-                                            </div>
-                                            <div class="option-text">
-                                                <h4>Trained Abroad</h4>
-                                                <p>For international nursing graduates</p>
-                                            </div>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="user-type-category">
-                                <h3>Returning Applicants</h3>
-                                <div class="user-type-options">
-                                    <label class="user-type-option">
-                                        <input type="radio" name="userType" value="license-holder">
-                                        <div class="option-content">
-                                            <div class="option-icon">
-                                                <i class="fas fa-id-card"></i>
-                                            </div>
-                                            <div class="option-text">
-                                                <h4>I have a License Number</h4>
-                                                <p>For licensed professionals seeking updates</p>
-                                            </div>
-                                        </div>
-                                    </label>
-
-                                    <label class="user-type-option">
-                                        <input type="radio" name="userType" value="exam-retake">
-                                        <div class="option-content">
-                                            <div class="option-icon">
-                                                <i class="fas fa-redo"></i>
-                                            </div>
-                                            <div class="option-text">
-                                                <h4>I need Exam Retakes</h4>
-                                                <p>For candidates requiring re-examination</p>
-                                            </div>
-                                        </div>
-                                    </label>
-
-                                    <label class="user-type-option">
-                                        <input type="radio" name="userType" value="professional-upgrade">
-                                        <div class="option-content">
-                                            <div class="option-icon">
-                                                <i class="fas fa-arrow-up"></i>
-                                            </div>
-                                            <div class="option-text">
-                                                <h4>Professional Upgrade</h4>
-                                                <p>For career advancement and specialization</p>
-                                            </div>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-actions">
-                            <button type="button" class="btn btn-primary" id="nextStep1" disabled>Continue</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 2: Personal Information -->
-                    <div class="form-step" id="step2">
-                        <div class="step-header">
-                            <h2>Personal Information</h2>
-                            <p>Please provide your personal details accurately</p>
-                        </div>
-
-                        <form class="personal-info-form" id="personalInfoForm">
-                            <div class="form-grid">
-                                <div class="form-group">
-                                    <label for="firstName">First Name *</label>
-                                    <input type="text" id="firstName" name="firstName" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="lastName">Last Name *</label>
-                                    <input type="text" id="lastName" name="lastName" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="middleName">Middle Name</label>
-                                    <input type="text" id="middleName" name="middleName">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="email">Email Address *</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="phone">Phone Number *</label>
-                                    <input type="tel" id="phone" name="phone" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="dateOfBirth">Date of Birth *</label>
-                                    <input type="date" id="dateOfBirth" name="dateOfBirth" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="gender">Gender *</label>
-                                    <select id="gender" name="gender" required>
-                                        <option value="">Select Gender</option>
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="stateOfOrigin">State of Origin *</label>
-                                    <select id="stateOfOrigin" name="stateOfOrigin" required>
-                                        <option value="">Select State</option>
-                                        <option value="abia">Abia</option>
-                                        <option value="adamawa">Adamawa</option>
-                                        <option value="akwa-ibom">Akwa Ibom</option>
-                                        <option value="anambra">Anambra</option>
-                                        <option value="bauchi">Bauchi</option>
-                                        <option value="bayelsa">Bayelsa</option>
-                                        <option value="benue">Benue</option>
-                                        <option value="borno">Borno</option>
-                                        <option value="cross-river">Cross River</option>
-                                        <option value="delta">Delta</option>
-                                        <option value="ebonyi">Ebonyi</option>
-                                        <option value="edo">Edo</option>
-                                        <option value="ekiti">Ekiti</option>
-                                        <option value="enugu">Enugu</option>
-                                        <option value="gombe">Gombe</option>
-                                        <option value="imo">Imo</option>
-                                        <option value="jigawa">Jigawa</option>
-                                        <option value="kaduna">Kaduna</option>
-                                        <option value="kano">Kano</option>
-                                        <option value="katsina">Katsina</option>
-                                        <option value="kebbi">Kebbi</option>
-                                        <option value="kogi">Kogi</option>
-                                        <option value="kwara">Kwara</option>
-                                        <option value="lagos">Lagos</option>
-                                        <option value="nasarawa">Nasarawa</option>
-                                        <option value="niger">Niger</option>
-                                        <option value="ogun">Ogun</option>
-                                        <option value="ondo">Ondo</option>
-                                        <option value="osun">Osun</option>
-                                        <option value="oyo">Oyo</option>
-                                        <option value="plateau">Plateau</option>
-                                        <option value="rivers">Rivers</option>
-                                        <option value="sokoto">Sokoto</option>
-                                        <option value="taraba">Taraba</option>
-                                        <option value="yobe">Yobe</option>
-                                        <option value="zamfara">Zamfara</option>
-                                        <option value="fct">FCT Abuja</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group full-width">
-                                    <label for="address">Residential Address *</label>
-                                    <textarea id="address" name="address" rows="3" required></textarea>
-                                </div>
-
-                                <div class="form-group" id="nursingSchoolGroup">
-                                    <label for="nursingSchool">Nursing School *</label>
-                                    <select id="nursingSchool" name="nursingSchool" required>
-                                        <option value="">Select Your Nursing School</option>
-                                        <option value="university-of-nigeria-nsukka">University of Nigeria, Nsukka</option>
-                                        <option value="university-of-lagos">University of Lagos</option>
-                                        <option value="ahmadu-bello-university">Ahmadu Bello University</option>
-                                        <option value="university-of-ibadan">University of Ibadan</option>
-                                        <option value="other">Other (Please specify)</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="graduationYear">Year of Graduation *</label>
-                                    <input type="number" id="graduationYear" name="graduationYear" min="1960" max="2025" required>
-                                </div>
-                            </div>
-
-                            <div class="security-notice">
-                                <div class="notice-icon">
-                                    <i class="fas fa-shield-alt"></i>
-                                </div>
-                                <div class="notice-text">
-                                    <strong>Data Security:</strong> Your data is protected with bank-level encryption. 
-                                    Join over 50,000 professionals registered in 2025.
-                                </div>
-                            </div>
-
-                            <div class="form-actions">
-                                <button type="button" class="btn btn-secondary" id="prevStep2">Previous</button>
-                                <button type="button" class="btn btn-primary" id="nextStep2">Continue</button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Step 3: Document Upload -->
-                    <div class="form-step" id="step3">
-                        <div class="step-header">
-                            <h2>Document Upload</h2>
-                            <p>Please upload the required documents for verification</p>
-                        </div>
-
-                        <div class="document-upload-section">
-                            <div class="upload-grid">
-                                <div class="upload-item">
-                                    <div class="upload-box" id="idUpload">
-                                        <div class="upload-icon">
-                                            <i class="fas fa-id-card"></i>
-                                        </div>
-                                        <div class="upload-text">
-                                            <h4>Valid ID Document *</h4>
-                                            <p>National ID, Driver's License, or Passport</p>
-                                            <span class="upload-hint">Drag & drop or click to upload</span>
-                                        </div>
-                                        <input type="file" id="idFile" accept=".jpg,.jpeg,.png,.pdf" hidden>
-                                    </div>
-                                </div>
-
-                                <div class="upload-item">
-                                    <div class="upload-box" id="certificateUpload">
-                                        <div class="upload-icon">
-                                            <i class="fas fa-certificate"></i>
-                                        </div>
-                                        <div class="upload-text">
-                                            <h4>Nursing Certificate *</h4>
-                                            <p>Your nursing school certificate</p>
-                                            <span class="upload-hint">Drag & drop or click to upload</span>
-                                        </div>
-                                        <input type="file" id="certificateFile" accept=".jpg,.jpeg,.png,.pdf" hidden>
-                                    </div>
-                                </div>
-
-                                <div class="upload-item">
-                                    <div class="upload-box" id="transcriptUpload">
-                                        <div class="upload-icon">
-                                            <i class="fas fa-file-alt"></i>
-                                        </div>
-                                        <div class="upload-text">
-                                            <h4>Academic Transcript</h4>
-                                            <p>Official transcript from your institution</p>
-                                            <span class="upload-hint">Drag & drop or click to upload</span>
-                                        </div>
-                                        <input type="file" id="transcriptFile" accept=".jpg,.jpeg,.png,.pdf" hidden>
-                                    </div>
-                                </div>
-
-                                <div class="upload-item">
-                                    <div class="upload-box" id="passportUpload">
-                                        <div class="upload-icon">
-                                            <i class="fas fa-camera"></i>
-                                        </div>
-                                        <div class="upload-text">
-                                            <h4>Passport Photo *</h4>
-                                            <p>Recent passport-sized photograph</p>
-                                            <span class="upload-hint">Drag & drop or click to upload</span>
-                                        </div>
-                                        <input type="file" id="passportFile" accept=".jpg,.jpeg,.png" hidden>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="upload-guidelines">
-                                <h4>Upload Guidelines:</h4>
-                                <ul>
-                                    <li>Maximum file size: 5MB per document</li>
-                                    <li>Accepted formats: JPG, PNG, PDF</li>
-                                    <li>Documents must be clear and readable</li>
-                                    <li>All documents must be in English or translated</li>
-                                </ul>
-                            </div>
-
-                            <div class="form-actions">
-                                <button type="button" class="btn btn-secondary" id="prevStep3">Previous</button>
-                                <button type="button" class="btn btn-primary" id="submitRegistration">Submit Registration</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI Assistant -->
-                <div class="ai-assistant">
-                    <div class="assistant-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="assistant-content">
-                        <h4>AI Form Assistant</h4>
-                        <p>Need help? I can provide suggestions for schools, certifications, and guide you through the process.</p>
-                        <button class="btn btn-outline btn-small" id="aiAssistant">Get Help</button>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="registration-wrapper">
+          <!-- Progress Tracker -->
+          <div class="progress-tracker">
+            <div class="progress-step active" data-step="1">
+              <div class="step-number">1</div>
+              <div class="step-label">User Type</div>
             </div>
+            <div class="progress-step" data-step="2">
+              <div class="step-number">2</div>
+              <div class="step-label">Personal Info</div>
+            </div>
+            <div class="progress-step" data-step="3">
+              <div class="step-number">3</div>
+              <div class="step-label">Documents</div>
+            </div>
+          </div>
+
+          <!-- Registration Form -->
+          <div class="registration-form">
+            <!-- Step 1: User Type Selection -->
+            <div class="form-step active" id="step1">
+              <div class="step-header">
+                <h2>Choose Your Registration Type</h2>
+                <p>Select the option that best describes your situation</p>
+              </div>
+
+              <div class="user-type-selection">
+                <div class="user-type-category">
+                  <h3>Fresh Applicants</h3>
+                  <div class="user-type-options">
+                    <label class="user-type-option">
+                      <input
+                        type="radio"
+                        name="userType"
+                        value="fresh-nigeria"
+                      />
+                      <div class="option-content">
+                        <div class="option-icon">
+                          <i class="fas fa-flag"></i>
+                        </div>
+                        <div class="option-text">
+                          <h4>Trained in Nigeria</h4>
+                          <p>For graduates from Nigerian nursing schools</p>
+                        </div>
+                      </div>
+                    </label>
+
+                    <label class="user-type-option">
+                      <input
+                        type="radio"
+                        name="userType"
+                        value="fresh-abroad"
+                      />
+                      <div class="option-content">
+                        <div class="option-icon">
+                          <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="option-text">
+                          <h4>Trained Abroad</h4>
+                          <p>For international nursing graduates</p>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="user-type-category">
+                  <h3>Returning Applicants</h3>
+                  <div class="user-type-options">
+                    <label class="user-type-option">
+                      <input
+                        type="radio"
+                        name="userType"
+                        value="license-holder"
+                      />
+                      <div class="option-content">
+                        <div class="option-icon">
+                          <i class="fas fa-id-card"></i>
+                        </div>
+                        <div class="option-text">
+                          <h4>I have a License Number</h4>
+                          <p>For licensed professionals seeking updates</p>
+                        </div>
+                      </div>
+                    </label>
+
+                    <label class="user-type-option">
+                      <input type="radio" name="userType" value="exam-retake" />
+                      <div class="option-content">
+                        <div class="option-icon">
+                          <i class="fas fa-redo"></i>
+                        </div>
+                        <div class="option-text">
+                          <h4>I need Exam Retakes</h4>
+                          <p>For candidates requiring re-examination</p>
+                        </div>
+                      </div>
+                    </label>
+
+                    <label class="user-type-option">
+                      <input
+                        type="radio"
+                        name="userType"
+                        value="professional-upgrade"
+                      />
+                      <div class="option-content">
+                        <div class="option-icon">
+                          <i class="fas fa-arrow-up"></i>
+                        </div>
+                        <div class="option-text">
+                          <h4>Professional Upgrade</h4>
+                          <p>For career advancement and specialization</p>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="btn btn-primary" id="nextStep1">
+                  Continue
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Personal Information -->
+            <div class="form-step" id="step2">
+              <div class="step-header">
+                <h2>Personal Information</h2>
+                <p>Please provide your personal details accurately</p>
+              </div>
+
+              <form class="personal-info-form" id="personalInfoForm">
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="firstName">First Name *</label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="lastName">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName" required />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="middleName">Middle Name</label>
+                    <input type="text" id="middleName" name="middleName" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="dateOfBirth">Date of Birth *</label>
+                    <input
+                      type="date"
+                      id="dateOfBirth"
+                      name="dateOfBirth"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="gender">Gender *</label>
+                    <select id="gender" name="gender" required>
+                      <option value="">Select Gender</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="stateOfOrigin">State of Origin *</label>
+                    <select id="stateOfOrigin" name="stateOfOrigin" required>
+                      <option value="">Select State</option>
+                      <option value="abia">Abia</option>
+                      <option value="adamawa">Adamawa</option>
+                      <option value="akwa-ibom">Akwa Ibom</option>
+                      <option value="anambra">Anambra</option>
+                      <option value="bauchi">Bauchi</option>
+                      <option value="bayelsa">Bayelsa</option>
+                      <option value="benue">Benue</option>
+                      <option value="borno">Borno</option>
+                      <option value="cross-river">Cross River</option>
+                      <option value="delta">Delta</option>
+                      <option value="ebonyi">Ebonyi</option>
+                      <option value="edo">Edo</option>
+                      <option value="ekiti">Ekiti</option>
+                      <option value="enugu">Enugu</option>
+                      <option value="gombe">Gombe</option>
+                      <option value="imo">Imo</option>
+                      <option value="jigawa">Jigawa</option>
+                      <option value="kaduna">Kaduna</option>
+                      <option value="kano">Kano</option>
+                      <option value="katsina">Katsina</option>
+                      <option value="kebbi">Kebbi</option>
+                      <option value="kogi">Kogi</option>
+                      <option value="kwara">Kwara</option>
+                      <option value="lagos">Lagos</option>
+                      <option value="nasarawa">Nasarawa</option>
+                      <option value="niger">Niger</option>
+                      <option value="ogun">Ogun</option>
+                      <option value="ondo">Ondo</option>
+                      <option value="osun">Osun</option>
+                      <option value="oyo">Oyo</option>
+                      <option value="plateau">Plateau</option>
+                      <option value="rivers">Rivers</option>
+                      <option value="sokoto">Sokoto</option>
+                      <option value="taraba">Taraba</option>
+                      <option value="yobe">Yobe</option>
+                      <option value="zamfara">Zamfara</option>
+                      <option value="fct">FCT Abuja</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group full-width">
+                    <label for="address">Residential Address *</label>
+                    <textarea
+                      id="address"
+                      name="address"
+                      rows="3"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group" id="nursingSchoolGroup">
+                    <label for="nursingSchool">Nursing School *</label>
+                    <select id="nursingSchool" name="nursingSchool" required>
+                      <option value="">Select Your Nursing School</option>
+                      <option value="university-of-nigeria-nsukka">
+                        University of Nigeria, Nsukka
+                      </option>
+                      <option value="university-of-lagos">
+                        University of Lagos
+                      </option>
+                      <option value="ahmadu-bello-university">
+                        Ahmadu Bello University
+                      </option>
+                      <option value="university-of-ibadan">
+                        University of Ibadan
+                      </option>
+                      <option value="other">Other (Please specify)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="graduationYear">Year of Graduation *</label>
+                    <input
+                      type="number"
+                      id="graduationYear"
+                      name="graduationYear"
+                      min="1960"
+                      max="2025"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="security-notice">
+                  <div class="notice-icon">
+                    <i class="fas fa-shield-alt"></i>
+                  </div>
+                  <div class="notice-text">
+                    <strong>Data Security:</strong> Your data is protected with
+                    bank-level encryption. Join over 50,000 professionals
+                    registered in 2025.
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    id="prevStep2"
+                  >
+                    Previous
+                  </button>
+                  <button type="button" class="btn btn-primary" id="nextStep2">
+                    Continue
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Step 3: Document Upload -->
+            <div class="form-step" id="step3">
+              <div class="step-header">
+                <h2>Document Upload</h2>
+                <p>Please upload the required documents for verification</p>
+              </div>
+
+              <div class="document-upload-section">
+                <div class="upload-grid">
+                  <div class="upload-item">
+                    <div class="upload-box" id="idUpload">
+                      <div class="upload-icon">
+                        <i class="fas fa-id-card"></i>
+                      </div>
+                      <div class="upload-text">
+                        <h4>Valid ID Document *</h4>
+                        <p>National ID, Driver's License, or Passport</p>
+                        <span class="upload-hint"
+                          >Drag & drop or click to upload</span
+                        >
+                      </div>
+                      <input
+                        type="file"
+                        id="idFile"
+                        accept=".jpg,.jpeg,.png,.pdf"
+                        hidden
+                      />
+                    </div>
+                  </div>
+
+                  <div class="upload-item">
+                    <div class="upload-box" id="certificateUpload">
+                      <div class="upload-icon">
+                        <i class="fas fa-certificate"></i>
+                      </div>
+                      <div class="upload-text">
+                        <h4>Nursing Certificate *</h4>
+                        <p>Your nursing school certificate</p>
+                        <span class="upload-hint"
+                          >Drag & drop or click to upload</span
+                        >
+                      </div>
+                      <input
+                        type="file"
+                        id="certificateFile"
+                        accept=".jpg,.jpeg,.png,.pdf"
+                        hidden
+                      />
+                    </div>
+                  </div>
+
+                  <div class="upload-item">
+                    <div class="upload-box" id="transcriptUpload">
+                      <div class="upload-icon">
+                        <i class="fas fa-file-alt"></i>
+                      </div>
+                      <div class="upload-text">
+                        <h4>Academic Transcript</h4>
+                        <p>Official transcript from your institution</p>
+                        <span class="upload-hint"
+                          >Drag & drop or click to upload</span
+                        >
+                      </div>
+                      <input
+                        type="file"
+                        id="transcriptFile"
+                        accept=".jpg,.jpeg,.png,.pdf"
+                        hidden
+                      />
+                    </div>
+                  </div>
+
+                  <div class="upload-item">
+                    <div class="upload-box" id="passportUpload">
+                      <div class="upload-icon">
+                        <i class="fas fa-camera"></i>
+                      </div>
+                      <div class="upload-text">
+                        <h4>Passport Photo *</h4>
+                        <p>Recent passport-sized photograph</p>
+                        <span class="upload-hint"
+                          >Drag & drop or click to upload</span
+                        >
+                      </div>
+                      <input
+                        type="file"
+                        id="passportFile"
+                        accept=".jpg,.jpeg,.png"
+                        hidden
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="upload-guidelines">
+                  <h4>Upload Guidelines:</h4>
+                  <ul>
+                    <li>Maximum file size: 5MB per document</li>
+                    <li>Accepted formats: JPG, PNG, PDF</li>
+                    <li>Documents must be clear and readable</li>
+                    <li>All documents must be in English or translated</li>
+                  </ul>
+                </div>
+
+                <div class="form-actions">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    id="prevStep3"
+                  >
+                    Previous
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="submitRegistration"
+                  >
+                    Submit Registration
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI Assistant -->
+          <div class="ai-assistant">
+            <div class="assistant-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div class="assistant-content">
+              <h4>AI Form Assistant</h4>
+              <p>
+                Need help? I can provide suggestions for schools,
+                certifications, and guide you through the process.
+              </p>
+              <button class="btn btn-outline btn-small" id="aiAssistant">
+                Get Help
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Indexing Guide Section -->
     <section class="indexing-guide">
-        <div class="container">
-            <div class="guide-header">
-                <h2>How to Register for Indexing</h2>
-                <p>Follow these simple steps to complete your professional registration</p>
-            </div>
-
-            <div class="guide-steps">
-                <div class="guide-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Create Profile and Login</h3>
-                        <p>Enter required information, verify your email address, and access your dashboard.</p>
-                    </div>
-                </div>
-
-                <div class="guide-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Apply for Indexing</h3>
-                        <p>Fill the application form. School officer validates your information. If cleared, proceed to payment. If rejected, receive edit notification.</p>
-                    </div>
-                </div>
-
-                <div class="guide-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Make Payment</h3>
-                        <p>Select your preferred payment gateway and complete the transaction securely.</p>
-                    </div>
-                </div>
-
-                <div class="guide-step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Receive Index Number</h3>
-                        <p>Index number is issued after approval and payment confirmation. Disapproved users will be notified with reasons.</p>
-                    </div>
-                </div>
-
-                <div class="guide-next-step">
-                    <div class="next-step-icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <div class="next-step-content">
-                        <h3>Next Step: Apply for Examination</h3>
-                        <p>Once indexed, you can proceed to apply for professional examinations.</p>
-                        <a href="dashboard.html" class="btn btn-primary">Go to Dashboard</a>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="guide-header">
+          <h2>How to Register for Indexing</h2>
+          <p>
+            Follow these simple steps to complete your professional registration
+          </p>
         </div>
+
+        <div class="guide-steps">
+          <div class="guide-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Create Profile and Login</h3>
+              <p>
+                Enter required information, verify your email address, and
+                access your dashboard.
+              </p>
+            </div>
+          </div>
+
+          <div class="guide-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Apply for Indexing</h3>
+              <p>
+                Fill the application form. School officer validates your
+                information. If cleared, proceed to payment. If rejected,
+                receive edit notification.
+              </p>
+            </div>
+          </div>
+
+          <div class="guide-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Make Payment</h3>
+              <p>
+                Select your preferred payment gateway and complete the
+                transaction securely.
+              </p>
+            </div>
+          </div>
+
+          <div class="guide-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Receive Index Number</h3>
+              <p>
+                Index number is issued after approval and payment confirmation.
+                Disapproved users will be notified with reasons.
+              </p>
+            </div>
+          </div>
+
+          <div class="guide-next-step">
+            <div class="next-step-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="next-step-content">
+              <h3>Next Step: Apply for Examination</h3>
+              <p>
+                Once indexed, you can proceed to apply for professional
+                examinations.
+              </p>
+              <a href="dashboard.html" class="btn btn-primary"
+                >Go to Dashboard</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-heart-pulse"></i>
-                        </div>
-                        <div class="logo-text">
-                            <h3>NNEC</h3>
-                            <p>Nigerian Nursing Excellence Council</p>
-                        </div>
-                    </div>
-                    <p class="footer-desc">
-                        Elevating nursing and midwifery standards across Nigeria through professional 
-                        excellence, continuous education, and innovative healthcare solutions.
-                    </p>
-                    <p class="footer-copy">
-                        © 2025 Nursing & Midwifery Council of Nigeria - Powered by SW Global
-                    </p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="dashboard.html">Dashboard</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="support.html">Support</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Support Options</h4>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>support@nnec.ng</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+234 800 NNEC (6632)</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-comments"></i>
-                            <span>Live Chat (24/7)</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <div class="logo-icon">
+                <i class="fas fa-heart-pulse"></i>
+              </div>
+              <div class="logo-text">
+                <h3>NMCN</h3>
+                <p>Nursing & Midwifery Council of Nigeria</p>
+              </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>Trusted by over 300,000 certified professionals across Nigeria</p>
+            <p class="footer-desc">
+              Elevating nursing and midwifery standards across Nigeria through
+              professional excellence, continuous education, and innovative
+              healthcare solutions.
+            </p>
+            <p class="footer-copy">
+              © 2025 Nursing & Midwifery Council of Nigeria - Powered by SW
+              Global
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="support.html">Support</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Support Options</h4>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>support@NMCN.ng</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+234 800 NMCN (6632)</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-comments"></i>
+                <span>Live Chat (24/7)</span>
+              </div>
             </div>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <p>Trusted by over 300,000 certified professionals across Nigeria</p>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
     <script src="register.js"></script>
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const steps = document.querySelectorAll(".form-step");
+        const progressSteps = document.querySelectorAll(".progress-step");
+
+        const next1 = document.getElementById("nextStep1");
+        const next2 = document.getElementById("nextStep2");
+        const prev2 = document.getElementById("prevStep2");
+
+        let currentStep = 0;
+
+        function showStep(index) {
+          steps.forEach((step, i) => {
+            step.classList.toggle("active", i === index);
+          });
+
+          progressSteps.forEach((step, i) => {
+            step.classList.toggle("active", i === index);
+          });
+
+          currentStep = index;
+        }
+
+        next1.addEventListener("click", () => {
+          const selected = document.querySelector(
+            'input[name="userType"]:checked'
+          );
+          if (!selected) {
+            alert("Please select a registration type.");
+            return;
+          }
+          showStep(1); // Move to Step 2
+        });
+
+        next2.addEventListener("click", () => {
+          // Optional: Validate Step 2 form inputs here if needed
+          showStep(2); // Move to Step 3
+        });
+
+        prev2.addEventListener("click", () => {
+          showStep(0); // Back to Step 1
+        });
+      });
+    </script>
+  </body>
 </html>

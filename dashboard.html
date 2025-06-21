@@ -1,387 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Nigerian Nursing Excellence Council</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="dashboard.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Nursing & Midwifery Council of Nigeria</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Header -->
     <header class="header">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-heart-pulse"></i>
-                    </div>
-                    <div class="logo-text">
-                        <h1>NNEC</h1>
-                        <p>Nigerian Nursing Excellence Council</p>
-                    </div>
-                </div>
-                
-                <nav class="nav-menu" id="navMenu">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="register.html" class="nav-link">Register</a>
-                    <a href="faq.html" class="nav-link">FAQ</a>
-                    <a href="support.html" class="nav-link">Get Support</a>
-                    <div class="user-menu">
-                        <button class="user-btn" id="userMenuBtn">
-                            <div class="user-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <span>John Doe</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="user-dropdown" id="userDropdown">
-                            <a href="#profile" class="dropdown-item">
-                                <i class="fas fa-user"></i>
-                                Profile Settings
-                            </a>
-                            <a href="#notifications" class="dropdown-item">
-                                <i class="fas fa-bell"></i>
-                                Notifications
-                            </a>
-                            <a href="#help" class="dropdown-item">
-                                <i class="fas fa-question-circle"></i>
-                                Help Center
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="index.html" class="dropdown-item logout">
-                                <i class="fas fa-sign-out-alt"></i>
-                                Logout
-                            </a>
-                        </div>
-                    </div>
-                </nav>
-                
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
+      <div class="container">
+        <div class="nav-wrapper">
+          <div class="logo">
+            <div class="logo-icon">
+              <i class="fas fa-heart-pulse"></i>
             </div>
+            <div class="logo-text">
+              <h1>NMCN</h1>
+              <p>Nursing & Midwifery Council of Nigeria</p>
+            </div>
+          </div>
+
+          <nav class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="register.html" class="nav-link">Register</a>
+            <a href="faq.html" class="nav-link">FAQ</a>
+            <a href="support.html" class="nav-link">Get Support</a>
+            <div class="user-menu">
+              <button class="user-btn" id="userMenuBtn">
+                <div class="user-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <span>John Doe</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="user-dropdown" id="userDropdown">
+                <a href="#profile" class="dropdown-item">
+                  <i class="fas fa-user"></i>
+                  Profile Settings
+                </a>
+                <a href="#notifications" class="dropdown-item">
+                  <i class="fas fa-bell"></i>
+                  Notifications
+                </a>
+                <a href="#help" class="dropdown-item">
+                  <i class="fas fa-question-circle"></i>
+                  Help Center
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="index.html" class="dropdown-item logout">
+                  <i class="fas fa-sign-out-alt"></i>
+                  Logout
+                </a>
+              </div>
+            </div>
+          </nav>
+
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
+      </div>
     </header>
 
     <!-- Dashboard Content -->
     <main class="dashboard-main">
-        <div class="container">
-            <!-- Welcome Section -->
-            <section class="welcome-section">
-                <div class="welcome-content">
-                    <div class="welcome-text">
-                        <h1>Welcome back, John!</h1>
-                        <p>Your next exam is in <span class="countdown" id="examCountdown">14 days</span></p>
-                    </div>
-                    <div class="welcome-stats">
-                        <div class="stat-item">
-                            <div class="stat-icon">
-                                <i class="fas fa-calendar-check"></i>
-                            </div>
-                            <div class="stat-info">
-                                <div class="stat-number">3</div>
-                                <div class="stat-label">Completed Exams</div>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-icon">
-                                <i class="fas fa-trophy"></i>
-                            </div>
-                            <div class="stat-info">
-                                <div class="stat-number">95%</div>
-                                <div class="stat-label">Average Score</div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+          <div class="welcome-content">
+            <div class="welcome-text">
+              <h1>Welcome back, John!</h1>
+              <p>
+                Your next exam is in
+                <span class="countdown" id="examCountdown">14 days</span>
+              </p>
+            </div>
+            <div class="welcome-stats">
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <i class="fas fa-calendar-check"></i>
                 </div>
-            </section>
-
-            <!-- Quick Actions -->
-            <section class="quick-actions">
-                <h2>Quick Actions</h2>
-                <div class="actions-grid">
-                    <div class="action-card primary">
-                        <div class="action-icon">
-                            <i class="fas fa-credit-card"></i>
-                        </div>
-                        <div class="action-content">
-                            <h3>Pay Fees</h3>
-                            <p>Complete your examination fee payment</p>
-                            <div class="action-meta">
-                                <span class="amount">₦15,000</span>
-                                <span class="due">Due: July 1, 2025</span>
-                            </div>
-                        </div>
-                        <button class="action-btn">Pay Now</button>
-                    </div>
-
-                    <div class="action-card">
-                        <div class="action-icon">
-                            <i class="fas fa-calendar-plus"></i>
-                        </div>
-                        <div class="action-content">
-                            <h3>Book Exam</h3>
-                            <p>Schedule your next examination</p>
-                            <div class="action-meta">
-                                <span class="available">3 slots available</span>
-                            </div>
-                        </div>
-                        <button class="action-btn">Book Now</button>
-                    </div>
-
-                    <div class="action-card">
-                        <div class="action-icon">
-                            <i class="fas fa-download"></i>
-                        </div>
-                        <div class="action-content">
-                            <h3>Download Certificate</h3>
-                            <p>Get your professional certificates</p>
-                            <div class="action-meta">
-                                <span class="ready">2 certificates ready</span>
-                            </div>
-                        </div>
-                        <button class="action-btn">Download</button>
-                    </div>
-
-                    <div class="action-card">
-                        <div class="action-icon">
-                            <i class="fas fa-user-graduate"></i>
-                        </div>
-                        <div class="action-content">
-                            <h3>CPD Activities</h3>
-                            <p>Continue professional development</p>
-                            <div class="action-meta">
-                                <span class="progress">12/20 hours completed</span>
-                            </div>
-                        </div>
-                        <button class="action-btn">Continue</button>
-                    </div>
+                <div class="stat-info">
+                  <div class="stat-number">3</div>
+                  <div class="stat-label">Completed Exams</div>
                 </div>
-            </section>
-
-            <!-- Status Trackers -->
-            <section class="status-section">
-                <div class="status-grid">
-                    <div class="status-card">
-                        <div class="status-header">
-                            <h3>Application Progress</h3>
-                            <span class="status-badge in-progress">Under Review</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 80%"></div>
-                        </div>
-                        <div class="progress-info">
-                            <span>80% Complete</span>
-                            <span>Expected completion: 3 days</span>
-                        </div>
-                        <div class="status-steps">
-                            <div class="step completed">
-                                <i class="fas fa-check"></i>
-                                <span>Application Submitted</span>
-                            </div>
-                            <div class="step completed">
-                                <i class="fas fa-check"></i>
-                                <span>Documents Verified</span>
-                            </div>
-                            <div class="step active">
-                                <i class="fas fa-clock"></i>
-                                <span>Under Review</span>
-                            </div>
-                            <div class="step">
-                                <i class="fas fa-circle"></i>
-                                <span>Approval</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="status-card">
-                        <div class="status-header">
-                            <h3>Upcoming Exam</h3>
-                            <span class="status-badge scheduled">Scheduled</span>
-                        </div>
-                        <div class="exam-info">
-                            <div class="exam-details">
-                                <h4>Community Nursing</h4>
-                                <div class="exam-meta">
-                                    <div class="meta-item">
-                                        <i class="fas fa-calendar"></i>
-                                        <span>July 15, 2025</span>
-                                    </div>
-                                    <div class="meta-item">
-                                        <i class="fas fa-clock"></i>
-                                        <span>9:00 AM - 12:00 PM</span>
-                                    </div>
-                                    <div class="meta-item">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Lagos Examination Center</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="exam-countdown">
-                                <div class="countdown-number" id="daysLeft">14</div>
-                                <div class="countdown-label">Days Left</div>
-                            </div>
-                        </div>
-                        <div class="exam-actions">
-                            <button class="btn btn-outline">View Details</button>
-                            <button class="btn btn-primary">Prepare Now</button>
-                        </div>
-                    </div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <i class="fas fa-trophy"></i>
                 </div>
-            </section>
-
-            <!-- Notifications -->
-            <section class="notifications-section">
-                <div class="section-header">
-                    <h2>Recent Notifications</h2>
-                    <a href="#all-notifications" class="view-all">View All</a>
+                <div class="stat-info">
+                  <div class="stat-number">95%</div>
+                  <div class="stat-label">Average Score</div>
                 </div>
-                <div class="notifications-list">
-                    <div class="notification-item new">
-                        <div class="notification-icon">
-                            <i class="fas fa-bullhorn"></i>
-                        </div>
-                        <div class="notification-content">
-                            <h4>New: CPD Webinar on July 5</h4>
-                            <p>Join our continuing professional development webinar on "Modern Nursing Practices"</p>
-                            <div class="notification-meta">
-                                <span class="time">2 hours ago</span>
-                                <a href="#register" class="notification-action">Register Now</a>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                    <div class="notification-item">
-                        <div class="notification-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <div class="notification-content">
-                            <h4>Payment Confirmed</h4>
-                            <p>Your examination fee payment of ₦15,000 has been successfully processed</p>
-                            <div class="notification-meta">
-                                <span class="time">1 day ago</span>
-                                <a href="#receipt" class="notification-action">View Receipt</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="notification-item">
-                        <div class="notification-icon">
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                        <div class="notification-content">
-                            <h4>Certificate Ready</h4>
-                            <p>Your Professional Nursing Certificate is now available for download</p>
-                            <div class="notification-meta">
-                                <span class="time">3 days ago</span>
-                                <a href="#download" class="notification-action">Download</a>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+          <h2>Quick Actions</h2>
+          <div class="actions-grid">
+            <div class="action-card primary">
+              <div class="action-icon">
+                <i class="fas fa-credit-card"></i>
+              </div>
+              <div class="action-content">
+                <h3>Pay Fees</h3>
+                <p>Complete your examination fee payment</p>
+                <div class="action-meta">
+                  <span class="amount">₦15,000</span>
+                  <span class="due">Due: July 1, 2025</span>
                 </div>
-            </section>
+              </div>
+              <button class="action-btn">Pay Now</button>
+            </div>
 
-            <!-- Support Section -->
-            <section class="dashboard-support">
-                <div class="support-card">
-                    <div class="support-content">
-                        <div class="support-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="support-text">
-                            <h3>24/7 AI Assistant</h3>
-                            <p>Get instant help with your questions about exams, payments, and more</p>
-                        </div>
-                    </div>
-                    <button class="support-btn" id="askAssistant">Ask NNEC Assistant</button>
+            <div class="action-card">
+              <div class="action-icon">
+                <i class="fas fa-calendar-plus"></i>
+              </div>
+              <div class="action-content">
+                <h3>Book Exam</h3>
+                <p>Schedule your next examination</p>
+                <div class="action-meta">
+                  <span class="available">3 slots available</span>
                 </div>
+              </div>
+              <button class="action-btn">Book Now</button>
+            </div>
 
-                <div class="resources-section">
-                    <h3>Resource Hub</h3>
-                    <div class="resources-grid">
-                        <a href="#" class="resource-item">
-                            <i class="fas fa-book"></i>
-                            <span>Study Guides</span>
-                        </a>
-                        <a href="#" class="resource-item">
-                            <i class="fas fa-video"></i>
-                            <span>Video Tutorials</span>
-                        </a>
-                        <a href="#" class="resource-item">
-                            <i class="fas fa-question-circle"></i>
-                            <span>Practice Tests</span>
-                        </a>
-                        <a href="#" class="resource-item">
-                            <i class="fas fa-calendar"></i>
-                            <span>Exam Calendar</span>
-                        </a>
-                    </div>
+            <div class="action-card">
+              <div class="action-icon">
+                <i class="fas fa-download"></i>
+              </div>
+              <div class="action-content">
+                <h3>Download Certificate</h3>
+                <p>Get your professional certificates</p>
+                <div class="action-meta">
+                  <span class="ready">2 certificates ready</span>
                 </div>
-            </section>
-        </div>
+              </div>
+              <button class="action-btn">Download</button>
+            </div>
+
+            <div class="action-card">
+              <div class="action-icon">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <div class="action-content">
+                <h3>CPD Activities</h3>
+                <p>Continue professional development</p>
+                <div class="action-meta">
+                  <span class="progress">12/20 hours completed</span>
+                </div>
+              </div>
+              <button class="action-btn">Continue</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Status Trackers -->
+        <section class="status-section">
+          <div class="status-grid">
+            <div class="status-card">
+              <div class="status-header">
+                <h3>Application Progress</h3>
+                <span class="status-badge in-progress">Under Review</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 80%"></div>
+              </div>
+              <div class="progress-info">
+                <span>80% Complete</span>
+                <span>Expected completion: 3 days</span>
+              </div>
+              <div class="status-steps">
+                <div class="step completed">
+                  <i class="fas fa-check"></i>
+                  <span>Application Submitted</span>
+                </div>
+                <div class="step completed">
+                  <i class="fas fa-check"></i>
+                  <span>Documents Verified</span>
+                </div>
+                <div class="step active">
+                  <i class="fas fa-clock"></i>
+                  <span>Under Review</span>
+                </div>
+                <div class="step">
+                  <i class="fas fa-circle"></i>
+                  <span>Approval</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="status-card">
+              <div class="status-header">
+                <h3>Upcoming Exam</h3>
+                <span class="status-badge scheduled">Scheduled</span>
+              </div>
+              <div class="exam-info">
+                <div class="exam-details">
+                  <h4>Community Nursing</h4>
+                  <div class="exam-meta">
+                    <div class="meta-item">
+                      <i class="fas fa-calendar"></i>
+                      <span>July 15, 2025</span>
+                    </div>
+                    <div class="meta-item">
+                      <i class="fas fa-clock"></i>
+                      <span>9:00 AM - 12:00 PM</span>
+                    </div>
+                    <div class="meta-item">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <span>Lagos Examination Center</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="exam-countdown">
+                  <div class="countdown-number" id="daysLeft">14</div>
+                  <div class="countdown-label">Days Left</div>
+                </div>
+              </div>
+              <div class="exam-actions">
+                <button class="btn btn-outline">View Details</button>
+                <button class="btn btn-primary">Prepare Now</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Notifications -->
+        <section class="notifications-section">
+          <div class="section-header">
+            <h2>Recent Notifications</h2>
+            <a href="#all-notifications" class="view-all">View All</a>
+          </div>
+          <div class="notifications-list">
+            <div class="notification-item new">
+              <div class="notification-icon">
+                <i class="fas fa-bullhorn"></i>
+              </div>
+              <div class="notification-content">
+                <h4>New: CPD Webinar on July 5</h4>
+                <p>
+                  Join our continuing professional development webinar on
+                  "Modern Nursing Practices"
+                </p>
+                <div class="notification-meta">
+                  <span class="time">2 hours ago</span>
+                  <a href="#register" class="notification-action"
+                    >Register Now</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="notification-item">
+              <div class="notification-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <div class="notification-content">
+                <h4>Payment Confirmed</h4>
+                <p>
+                  Your examination fee payment of ₦15,000 has been successfully
+                  processed
+                </p>
+                <div class="notification-meta">
+                  <span class="time">1 day ago</span>
+                  <a href="#receipt" class="notification-action"
+                    >View Receipt</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="notification-item">
+              <div class="notification-icon">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <div class="notification-content">
+                <h4>Certificate Ready</h4>
+                <p>
+                  Your Professional Nursing Certificate is now available for
+                  download
+                </p>
+                <div class="notification-meta">
+                  <span class="time">3 days ago</span>
+                  <a href="#download" class="notification-action">Download</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="dashboard-support">
+          <div class="support-card">
+            <div class="support-content">
+              <div class="support-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="support-text">
+                <h3>24/7 AI Assistant</h3>
+                <p>
+                  Get instant help with your questions about exams, payments,
+                  and more
+                </p>
+              </div>
+            </div>
+            <button class="support-btn" id="askAssistant">
+              Ask NMCN Assistant
+            </button>
+          </div>
+
+          <div class="resources-section">
+            <h3>Resource Hub</h3>
+            <div class="resources-grid">
+              <a href="#" class="resource-item">
+                <i class="fas fa-book"></i>
+                <span>Study Guides</span>
+              </a>
+              <a href="#" class="resource-item">
+                <i class="fas fa-video"></i>
+                <span>Video Tutorials</span>
+              </a>
+              <a href="#" class="resource-item">
+                <i class="fas fa-question-circle"></i>
+                <span>Practice Tests</span>
+              </a>
+              <a href="#" class="resource-item">
+                <i class="fas fa-calendar"></i>
+                <span>Exam Calendar</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-heart-pulse"></i>
-                        </div>
-                        <div class="logo-text">
-                            <h3>NNEC</h3>
-                            <p>Nigerian Nursing Excellence Council</p>
-                        </div>
-                    </div>
-                    <p class="footer-desc">
-                        Elevating nursing and midwifery standards across Nigeria through professional 
-                        excellence, continuous education, and innovative healthcare solutions.
-                    </p>
-                    <div class="service-rating">
-                        <button class="btn btn-outline btn-small" id="rateService">Rate Our Service</button>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="register.html">Register</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="support.html">Support</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Support Options</h4>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>support@nnec.ng</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+234 800 NNEC (6632)</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-comments"></i>
-                            <span>Live Chat (24/7)</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <div class="logo-icon">
+                <i class="fas fa-heart-pulse"></i>
+              </div>
+              <div class="logo-text">
+                <h3>NMCN</h3>
+                <p>Nursing & Midwifery Council of Nigeria</p>
+              </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>© 2025 Nigerian Nursing Excellence Council. Powered by SW Global</p>
+            <p class="footer-desc">
+              Elevating nursing and midwifery standards across Nigeria through
+              professional excellence, continuous education, and innovative
+              healthcare solutions.
+            </p>
+            <div class="service-rating">
+              <button class="btn btn-outline btn-small" id="rateService">
+                Rate Our Service
+              </button>
             </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="register.html">Register</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="support.html">Support</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Support Options</h4>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>support@NMCN.ng</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+234 800 NMCN (6632)</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-comments"></i>
+                <span>Live Chat (24/7)</span>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2025 Nursing & Midwifery Council of Nigeria. Powered by SW Global
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
     <script src="dashboard.js"></script>
-</body>
+  </body>
 </html>
