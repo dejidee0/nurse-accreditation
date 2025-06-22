@@ -500,6 +500,7 @@ body {
   background: #1f2937;
   color: white;
   padding: 3rem 0 1rem;
+  max-height: max-content;
 }
 
 .footer-content {
